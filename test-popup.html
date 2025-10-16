@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Popup</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles-optimized.css">
+</head>
+<body>
+    <h1>Test Page - Scroll down or wait 15 seconds</h1>
+    <div style="height: 2000px; padding: 50px;">
+        <p>Scroll down to trigger popup...</p>
+        <button onclick="window.QuantEdgePopup.show()">Manual Trigger Popup</button>
+        <button onclick="window.QuantEdgePopup.reset()">Reset Cookie</button>
+    </div>
+
+    <!-- Email Capture Pop-up -->
+    <div class="email-popup-modal" id="email-popup">
+        <div class="email-popup-content">
+            <button class="popup-close" id="popup-close"></button>
+            
+            <div class="popup-header">
+                <div class="popup-icon">💡</div>
+                <h2 class="popup-title">Got a Brilliant Trading Strategy in Mind?</h2>
+                <p class="popup-subtitle">
+                    Whether it's the next game-changing algorithm or a unique market insight, 
+                    we'd love to hear about it. Let's turn your idea into reality together!
+                </p>
+            </div>
+            
+            <form class="popup-form" id="email-form">
+                <input 
+                    type="email" 
+                    class="popup-input" 
+                    id="popup-email"
+                    placeholder="Enter your email address" 
+                    required
+                >
+                
+                <div class="strategy-interests">
+                    <label class="strategy-label">What strategies interest you most?</label>
+                    <div class="strategy-options">
+                        <div class="strategy-option">
+                            <input type="checkbox" id="momentum" name="strategy" value="momentum">
+                            <label for="momentum">Momentum</label>
+                        </div>
+                        <div class="strategy-option">
+                            <input type="checkbox" id="mean-reversion" name="strategy" value="mean-reversion">
+                            <label for="mean-reversion">Mean Reversion</label>
+                        </div>
+                        <div class="strategy-option">
+                            <input type="checkbox" id="arbitrage" name="strategy" value="arbitrage">
+                            <label for="arbitrage">Arbitrage</label>
+                        </div>
+                        <div class="strategy-option">
+                            <input type="checkbox" id="custom" name="strategy" value="custom">
+                            <label for="custom">Custom Idea</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <button type="submit" class="popup-submit">
+                    Get Started - It's Quick & Easy!
+                </button>
+                
+                <div class="popup-trust">
+                    <div class="trust-badge">
+                        <div class="trust-icon">🔒</div>
+                        <div class="trust-text">100% Secure</div>
+                    </div>
+                    <div class="trust-badge">
+                        <div class="trust-icon">⚡</div>
+                        <div class="trust-text">Quick Response</div>
+                    </div>
+                    <div class="trust-badge">
+                        <div class="trust-icon">🎯</div>
+                        <div class="trust-text">No Spam</div>
+                    </div>
+                </div>
+                
+                <p class="popup-privacy">
+                    We respect your privacy. Your email will only be used to discuss your trading ideas.
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Floating Email Button -->
+    <div class="floating-email-btn" id="floating-email-btn" style="opacity: 1;">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 8L10.89 13.26C11.2187 13.4793 11.6049 13.5963 12 13.5963C12.3951 13.5963 12.7813 13.4793 13.11 13.26L21 8M5 19H19C19.5304 19 20.0391 18.7893 20.4142 18.4142C20.7893 18.0391 21 17.5304 21 17V7C21 6.46957 20.7893 5.96086 20.4142 5.58579C20.0391 5.21071 19.5304 5 19 5H5C4.46957 5 3.96086 5.21071 3.58579 5.58579C3.21071 5.96086 3 6.46957 3 7V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19Z" stroke="currentColor" stroke-width="2" fill="none"/>
+        </svg>
+    </div>
+
+    <!-- Success Message -->
+    <div class="success-message" id="success-message">
+        <h3>Awesome! We've Got Your Details 🎉</h3>
+        <p>We'll reach out within 24 hours to discuss your brilliant ideas!</p>
+    </div>
+
+    <!-- Notification Badge -->
+    <div class="notification-badge" id="notification-badge">
+        <span id="notification-text">Someone just shared their strategy idea!</span>
+    </div>
+
+    <script src="email-popup.js"></script>
+</body>
+</html>

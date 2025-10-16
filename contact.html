@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Connect with Elite Trading Experts | QuantEdge</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <meta name="description" content="Contact QuantEdge Solutions for elite quantitative trading solutions, algorithmic development, and institutional-grade financial technology services.">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loading-screen">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <svg class="nav-logo" width="32" height="32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="brandGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#1a73e8;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#34a853;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <rect x="10" y="20" width="15" height="60" fill="url(#brandGradient)" opacity="0.8"/>
+                    <rect x="30" y="10" width="15" height="80" fill="url(#brandGradient)" opacity="0.9"/>
+                    <rect x="50" y="25" width="15" height="50" fill="url(#brandGradient)" opacity="0.7"/>
+                    <rect x="70" y="15" width="15" height="70" fill="url(#brandGradient)" opacity="0.85"/>
+                    <path d="M10 50 Q50 30 90 50" stroke="url(#brandGradient)" stroke-width="3" fill="none" opacity="0.6"/>
+                </svg>
+                <span>QuantEdge</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="services.html">Services</a>
+                    <div class="nav-dropdown">
+                        <a href="service-algorithmic-trading.html">Algorithmic Trading Development</a>
+                        <a href="service-quantitative-research.html">Quantitative Research & Analysis</a>
+                        <a href="service-risk-management.html">Risk Management & Infrastructure</a>
+                        <a href="service-portfolio-optimization.html">Portfolio Optimization</a>
+                        <a href="service-execution-services.html">Execution Services</a>
+                        <a href="service-bespoke-solutions.html">Bespoke Solutions</a>
+                        <a href="service-machine-learning.html">Machine Learning Alpha Research</a>
+                        <a href="service-api-integration.html">API Integration</a>
+                        <a href="service-cloud-deployment.html">Cloud & VPS Deployment</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="strategies.html">Strategies</a>
+                    <div class="nav-dropdown">
+                        <a href="strategy-gap-and-go-optimized.html">Gap and Go Strategy</a>
+                        <a href="strategy-gap-and-close-optimized.html">Gap and Close Strategy</a>
+                        <a href="strategy-monthly-dip-optimized.html">Monthly Dip Strategy</a>
+                        <a href="strategy-framework.html">Strategy Development Framework</a>
+                        <a href="strategy-bespoke.html">Bespoke Strategy Development</a>
+                    </div>
+                </li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Connect with the Elite</h1>
+        </div>
+    </section>
+
+    <!-- Contact Container -->
+    <section class="contact-container">
+        <div class="container">
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <h2>Begin Your Quantitative Journey</h2>
+                <p>Schedule a confidential consultation with our quantitative experts to discuss how our elite solutions can transform your trading performance. We typically respond within 2 hours during business hours.</p>
+                
+                <form id="contactForm" novalidate>
+                    <div class="form-group">
+                        <label for="firstName">First Name *</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                        <span class="error-message" id="firstNameError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastName">Last Name *</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                        <span class="error-message" id="lastNameError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567">
+                        <span class="error-message" id="phoneError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company">Company/Institution *</label>
+                        <input type="text" id="company" name="company" required placeholder="Hedge Fund, Family Office, etc.">
+                        <span class="error-message" id="companyError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="position">Your Role *</label>
+                        <select id="position" name="position" required>
+                            <option value="">Select your role</option>
+                            <option value="cio">Chief Investment Officer</option>
+                            <option value="portfolio-manager">Portfolio Manager</option>
+                            <option value="trader">Trader</option>
+                            <option value="quant-researcher">Quantitative Researcher</option>
+                            <option value="risk-manager">Risk Manager</option>
+                            <option value="cto">Chief Technology Officer</option>
+                            <option value="head-trading">Head of Trading</option>
+                            <option value="founder-ceo">Founder/CEO</option>
+                            <option value="other">Other Executive</option>
+                        </select>
+                        <span class="error-message" id="positionError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service">Primary Interest *</label>
+                        <select id="service" name="service" required>
+                            <option value="">Select primary interest</option>
+                            <option value="algorithmic-trading">Algorithmic Trading Development</option>
+                            <option value="quantitative-research">Quantitative Research & Analysis</option>
+                            <option value="risk-management">Risk Management & Infrastructure</option>
+                            <option value="portfolio-optimization">Portfolio Optimization</option>
+                            <option value="execution-services">Execution Services & Market Making</option>
+                            <option value="custom-solutions">Bespoke Solutions & Consulting</option>
+                            <option value="partnership">Strategic Partnership</option>
+                            <option value="general-inquiry">General Inquiry</option>
+                        </select>
+                        <span class="error-message" id="serviceError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="assets">Asset Classes</label>
+                        <select id="assets" name="assets">
+                            <option value="">Select primary asset class</option>
+                            <option value="equities">Equities (Global)</option>
+                            <option value="fixed-income">Fixed Income</option>
+                            <option value="foreign-exchange">Foreign Exchange</option>
+                            <option value="commodities">Commodities</option>
+                            <option value="derivatives">Derivatives (Options/Futures)</option>
+                            <option value="cryptocurrencies">Cryptocurrencies</option>
+                            <option value="alternative-investments">Alternative Investments</option>
+                            <option value="multi-asset">Multi-Asset Strategies</option>
+                        </select>
+                        <span class="error-message" id="assetsError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="aum">Assets Under Management</label>
+                        <select id="aum" name="aum">
+                            <option value="">Select AUM range</option>
+                            <option value="under-10m">Under $10M</option>
+                            <option value="10m-50m">$10M - $50M</option>
+                            <option value="50m-100m">$50M - $100M</option>
+                            <option value="100m-500m">$100M - $500M</option>
+                            <option value="500m-1b">$500M - $1B</option>
+                            <option value="1b-5b">$1B - $5B</option>
+                            <option value="over-5b">Over $5B</option>
+                            <option value="confidential">Prefer not to disclose</option>
+                        </select>
+                        <span class="error-message" id="aumError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="timeline">Implementation Timeline</label>
+                        <select id="timeline" name="timeline">
+                            <option value="">Select timeline</option>
+                            <option value="immediate">Immediate (Within 30 days)</option>
+                            <option value="quarter">This Quarter (1-3 months)</option>
+                            <option value="half-year">Next 6 months</option>
+                            <option value="year">Within 12 months</option>
+                            <option value="exploratory">Exploratory/Research Phase</option>
+                        </select>
+                        <span class="error-message" id="timelineError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="budget">Estimated Investment Range</label>
+                        <select id="budget" name="budget">
+                            <option value="">Select investment range</option>
+                            <option value="under-100k">Under $100K</option>
+                            <option value="100k-500k">$100K - $500K</option>
+                            <option value="500k-1m">$500K - $1M</option>
+                            <option value="1m-5m">$1M - $5M</option>
+                            <option value="5m-10m">$5M - $10M</option>
+                            <option value="over-10m">Over $10M</option>
+                            <option value="discuss">To be discussed</option>
+                        </select>
+                        <span class="error-message" id="budgetError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Project Details & Objectives *</label>
+                        <textarea id="message" name="message" required placeholder="Please describe your specific requirements, current challenges, performance objectives, and any technical specifications. The more detail you provide, the better we can tailor our initial consultation to your needs."></textarea>
+                        <span class="error-message" id="messageError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="nda" name="nda">
+                            <span class="checkmark"></span>
+                            I require a mutual NDA before discussing proprietary strategies
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="newsletter" name="newsletter" checked>
+                            <span class="checkmark"></span>
+                            Subscribe to QuantEdge Research Insights (monthly quantitative research updates)
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" id="submitButton">
+                        <span class="btn-text">Schedule Consultation</span>
+                        <span class="btn-loading" style="display: none;">Processing...</span>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <h3>Direct Contact Information</h3>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <h4>Headquarters</h4>
+                        <p>QuantEdge Solutions<br>
+                        One World Financial Center<br>
+                        200 Liberty Street, 35th Floor<br>
+                        New York, NY 10281</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h4>Phone</h4>
+                        <p>Main: +1 (212) 555-QUANT<br>
+                        Direct: +1 (212) 555-0123<br>
+                        Emergency: +1 (917) 555-0456</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h4>Email</h4>
+                        <p>General: info@quantedge.com<br>
+                        Sales: sales@quantedge.com<br>
+                        Support: support@quantedge.com</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h4>Global Offices</h4>
+                        <p>London • Singapore • Hong Kong<br>
+                        Tokyo • Sydney • Frankfurt<br>
+                        Available 24/7 for client support</p>
+                    </div>
+                </div>
+
+                <h3>Response Commitment</h3>
+                <ul>
+                    <li><strong>Initial Response:</strong> Within 2 hours (business hours)</li>
+                    <li><strong>Consultation Scheduling:</strong> Within 24 hours</li>
+                    <li><strong>Proposal Delivery:</strong> Within 48-72 hours</li>
+                    <li><strong>Technical Questions:</strong> Same-day response guaranteed</li>
+                </ul>
+
+                <h3>What to Expect</h3>
+                <ul>
+                    <li>Comprehensive analysis of your current trading infrastructure</li>
+                    <li>Customized strategy recommendations based on your objectives</li>
+                    <li>Detailed implementation roadmap with timelines and milestones</li>
+                    <li>Risk assessment and performance projections</li>
+                    <li>Technology architecture and integration planning</li>
+                    <li>Transparent pricing structure with no hidden fees</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Join the Quantitative Elite</h2>
+            <p>Take the first step towards transforming your trading performance with institutional-grade solutions</p>
+            <a href="#contactForm" class="btn btn-secondary">Start Consultation</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 QuantEdge Solutions. All rights reserved. | Transforming Markets Through Technology</p>
+        </div>
+    </footer>
+
+    <style>
+        .error-message {
+            color: #ff4d7d;
+            font-size: 0.875rem;
+            margin-top: 0.5rem;
+            display: block;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .error-message.show {
+            opacity: 1;
+        }
+
+        .form-group input.error,
+        .form-group select.error,
+        .form-group textarea.error {
+            border-color: #ff4d7d;
+            box-shadow: 0 0 0 3px rgba(255, 77, 125, 0.1);
+        }
+
+        .form-group input.success,
+        .form-group select.success,
+        .form-group textarea.success {
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 0 3px rgba(0, 217, 255, 0.1);
+        }
+
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+
+        .checkbox-label input[type="checkbox"] {
+            margin-right: 12px;
+            transform: scale(1.2);
+        }
+
+        .contact-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .contact-item h4 {
+            color: var(--white);
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-item p {
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .btn-loading {
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .btn-loading::after {
+            content: '';
+            width: 16px;
+            height: 16px;
+            border: 2px solid transparent;
+            border-top: 2px solid currentColor;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-left: 8px;
+        }
+    </style>
+
+    <script>
+        // Loading screen
+        window.addEventListener('load', function() {
+            const loadingScreen = document.getElementById('loading-screen');
+            setTimeout(() => {
+                loadingScreen.classList.add('fade-out');
+                setTimeout(() => {
+                    loadingScreen.style.display = 'none';
+                }, 500);
+            }, 1000);
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        menuToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+        });
+
+        // Form validation and submission
+        const form = document.getElementById('contactForm');
+        const submitButton = document.getElementById('submitButton');
+        const btnText = submitButton.querySelector('.btn-text');
+        const btnLoading = submitButton.querySelector('.btn-loading');
+
+        // Validation functions
+        function validateRequired(field, fieldName) {
+            const value = field.value.trim();
+            const errorElement = document.getElementById(field.id + 'Error');
+            
+            if (!value) {
+                showError(field, errorElement, `${fieldName} is required`);
+                return false;
+            } else {
+                showSuccess(field, errorElement);
+                return true;
+            }
+        }
+
+        function validateEmail(field) {
+            const value = field.value.trim();
+            const errorElement = document.getElementById('emailError');
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            if (!value) {
+                showError(field, errorElement, 'Email address is required');
+                return false;
+            } else if (!emailRegex.test(value)) {
+                showError(field, errorElement, 'Please enter a valid email address');
+                return false;
+            } else {
+                showSuccess(field, errorElement);
+                return true;
+            }
+        }
+
+        function validatePhone(field) {
+            const value = field.value.trim();
+            const errorElement = document.getElementById('phoneError');
+            const phoneRegex = /^[\+]?[\d\s\(\)\-]{10,}$/;
+            
+            if (value && !phoneRegex.test(value)) {
+                showError(field, errorElement, 'Please enter a valid phone number');
+                return false;
+            } else {
+                showSuccess(field, errorElement);
+                return true;
+            }
+        }
+
+        function showError(field, errorElement, message) {
+            field.classList.add('error');
+            field.classList.remove('success');
+            errorElement.textContent = message;
+            errorElement.classList.add('show');
+        }
+
+        function showSuccess(field, errorElement) {
+            field.classList.remove('error');
+            field.classList.add('success');
+            errorElement.classList.remove('show');
+        }
+
+        // Real-time validation
+        document.getElementById('firstName').addEventListener('blur', function() {
+            validateRequired(this, 'First name');
+        });
+
+        document.getElementById('lastName').addEventListener('blur', function() {
+            validateRequired(this, 'Last name');
+        });
+
+        document.getElementById('email').addEventListener('blur', function() {
+            validateEmail(this);
+        });
+
+        document.getElementById('phone').addEventListener('blur', function() {
+            validatePhone(this);
+        });
+
+        document.getElementById('company').addEventListener('blur', function() {
+            validateRequired(this, 'Company/Institution');
+        });
+
+        document.getElementById('position').addEventListener('change', function() {
+            validateRequired(this, 'Role');
+        });
+
+        document.getElementById('service').addEventListener('change', function() {
+            validateRequired(this, 'Primary interest');
+        });
+
+        document.getElementById('message').addEventListener('blur', function() {
+            validateRequired(this, 'Project details');
+        });
+
+        // Form submission
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Validate all required fields
+            const isValid = 
+                validateRequired(document.getElementById('firstName'), 'First name') &&
+                validateRequired(document.getElementById('lastName'), 'Last name') &&
+                validateEmail(document.getElementById('email')) &&
+                validatePhone(document.getElementById('phone')) &&
+                validateRequired(document.getElementById('company'), 'Company/Institution') &&
+                validateRequired(document.getElementById('position'), 'Role') &&
+                validateRequired(document.getElementById('service'), 'Primary interest') &&
+                validateRequired(document.getElementById('message'), 'Project details');
+            
+            if (isValid) {
+                // Show loading state
+                submitButton.disabled = true;
+                btnText.style.display = 'none';
+                btnLoading.style.display = 'inline-flex';
+                
+                // Simulate form submission
+                setTimeout(() => {
+                    // Show success message
+                    alert('Thank you for your interest in QuantEdge Solutions! Our team will contact you within 2 hours to schedule your confidential consultation.');
+                    
+                    // Reset form
+                    form.reset();
+                    document.querySelectorAll('.error, .success').forEach(el => {
+                        el.classList.remove('error', 'success');
+                    });
+                    document.querySelectorAll('.error-message').forEach(el => {
+                        el.classList.remove('show');
+                    });
+                    
+                    // Reset button state
+                    submitButton.disabled = false;
+                    btnText.style.display = 'inline';
+                    btnLoading.style.display = 'none';
+                }, 2000);
+            }
+        });
+
+        // Smooth scroll for CTA button
+        document.querySelector('a[href="#contactForm"]').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('contactForm').scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        });
+    </script>
+
+    <!-- Sticky Sidebar -->
+    <div class="sticky-sidebar">
+        <a href="https://wa.link/p7vans" target="_blank" class="sidebar-btn whatsapp-btn" aria-label="Contact us on WhatsApp">
+            <svg class="sidebar-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.029 18.88c-1.161 0-2.305-.292-3.318-.844l-3.677.964.98-3.686c-.592-1.029-.9-2.201-.899-3.427.002-3.398 2.762-6.156 6.162-6.156 3.405 0 6.162 2.76 6.162 6.163 0 3.401-2.762 6.162-6.164 6.162z"/>
+            </svg>
+            <div class="sidebar-tooltip">WhatsApp</div>
+        </a>
+        <a href="quick-contact.html" class="sidebar-btn contact-btn" aria-label="Quick Contact">
+            <svg class="sidebar-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 8L10.89 13.26C11.2187 13.4793 11.6049 13.5963 12 13.5963C12.3951 13.5963 12.7813 13.4793 13.11 13.26L21 8M5 19H19C19.5304 19 20.0391 18.7893 20.4142 18.4142C20.7893 18.0391 21 17.5304 21 17V7C21 6.46957 20.7893 5.96086 20.4142 5.58579C20.0391 5.21071 19.5304 5 19 5H5C4.46957 5 3.96086 5.21071 3.58579 5.58579C3.21071 5.96086 3 6.46957 3 7V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19Z" stroke="currentColor" stroke-width="2" fill="none"/>
+            </svg>
+            <div class="sidebar-tooltip">Quick Contact</div>
+        </a>
+    </div>
+</body>
+</html>

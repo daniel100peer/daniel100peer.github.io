@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuantEdge Solutions - Elite Quantitative Trading & AI-Driven Financial Technology</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <meta name="description" content="Elite quantitative trading solutions, algorithmic trading development, and AI-driven financial technology for institutional and professional traders.">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loading-screen">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <svg class="nav-logo" width="32" height="32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="brandGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#1a73e8;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#34a853;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <rect x="10" y="20" width="15" height="60" fill="url(#brandGradient)" opacity="0.8"/>
+                    <rect x="30" y="10" width="15" height="80" fill="url(#brandGradient)" opacity="0.9"/>
+                    <rect x="50" y="25" width="15" height="50" fill="url(#brandGradient)" opacity="0.7"/>
+                    <rect x="70" y="15" width="15" height="70" fill="url(#brandGradient)" opacity="0.85"/>
+                    <path d="M10 50 Q50 30 90 50" stroke="url(#brandGradient)" stroke-width="3" fill="none" opacity="0.6"/>
+                </svg>
+                <span>QuantEdge</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li>
+                    <a href="services.html">Services</a>
+                    <div class="nav-dropdown">
+                        <a href="service-algorithmic-trading.html">Algorithmic Trading Development</a>
+                        <a href="service-quantitative-research.html">Quantitative Research & Analysis</a>
+                        <a href="service-risk-management.html">Risk Management & Infrastructure</a>
+                        <a href="service-portfolio-optimization.html">Portfolio Optimization</a>
+                        <a href="service-execution-services.html">Execution Services</a>
+                        <a href="service-bespoke-solutions.html">Bespoke Solutions</a>
+                        <a href="service-machine-learning.html">Machine Learning Alpha Research</a>
+                        <a href="service-api-integration.html">API Integration</a>
+                        <a href="service-cloud-deployment.html">Cloud & VPS Deployment</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="strategies.html">Strategies</a>
+                    <div class="nav-dropdown">
+                        <a href="strategy-gap-and-go-optimized.html">Gap and Go Strategy</a>
+                        <a href="strategy-gap-and-close-optimized.html">Gap and Close Strategy</a>
+                        <a href="strategy-monthly-dip-optimized.html">Monthly Dip Strategy</a>
+                        <a href="strategy-framework.html">Strategy Development Framework</a>
+                        <a href="strategy-bespoke.html">Bespoke Strategy Development</a>
+                    </div>
+                </li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">Next-Generation Trading Technology</div>
+                <h1 class="hero-title">
+                    Revolutionize Your Trading with 
+                    <span>AI-Powered Algorithms</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Elite quantitative solutions that leverage cutting-edge machine learning, advanced statistical models, 
+                    and ultra-low latency infrastructure to deliver superior alpha generation and risk-adjusted returns.
+                </p>
+                <div class="hero-buttons">
+                    <a href="services.html" class="btn btn-primary">Explore Solutions</a>
+                    <a href="contact.html" class="btn btn-secondary">Schedule Consultation</a>
+                </div>
+                
+                <!-- Hero Stats -->
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">$2.8B+</div>
+                        <div class="stat-label">Assets Under Management</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">98.7%</div>
+                        <div class="stat-label">Uptime Guarantee</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">156%</div>
+                        <div class="stat-label">Average Annual Returns</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Global Markets</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Elite Traders Choose Us</h2>
+            <p class="section-subtitle">
+                Advanced technology meets institutional-grade execution for unparalleled trading performance
+            </p>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon icon-ai"></div>
+                    <h3>AI-Driven Intelligence</h3>
+                    <p>Revolutionary machine learning models that adapt to market conditions in real-time, 
+                    identifying patterns and opportunities invisible to traditional analysis</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon icon-speed"></div>
+                    <h3>Ultra-Low Latency</h3>
+                    <p>Sub-microsecond execution speeds with institutional-grade infrastructure, 
+                    ensuring optimal market opportunity capture</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon icon-shield"></div>
+                    <h3>Advanced Risk Management</h3>
+                    <p>Sophisticated multi-layered risk controls with real-time monitoring, stress testing, 
+                    and automated position sizing to protect your capital</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon icon-analytics"></div>
+                    <h3>Quantitative Excellence</h3>
+                    <p>PhD-level research team deploying cutting-edge mathematical models, 
+                    statistical arbitrage, and factor-based strategies</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon icon-globe"></div>
+                    <h3>Institutional Infrastructure</h3>
+                    <p>Enterprise-grade execution systems with comprehensive risk management 
+                    and real-time performance attribution across asset classes</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon icon-target"></div>
+                    <h3>Bespoke Solutions</h3>
+                    <p>Custom algorithm development tailored to your specific strategy, risk profile, 
+                    and performance objectives with ongoing optimization</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="services-overview">
+        <div class="container">
+            <h2 class="section-title">Our Professional Quant Services</h2>
+            <p class="section-subtitle">
+                Comprehensive quantitative trading solutions with hands-on collaboration and expert guidance
+            </p>
+            
+            <!-- Closely Supervised Quant Services -->
+            <div class="services-category">
+                <h3 class="category-title">Closely Supervised Quant Services</h3>
+                <p class="category-subtitle">Direct collaboration and iterative development for maximum alignment with your vision</p>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <div class="service-icon">📊</div>
+                        <h4>Strategy Coding (Strategy-to-Code)</h4>
+                        <p>Precise coding based on detailed client instructions for platforms like MetaTrader, TradingView, or QuantConnect.</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">🔄</div>
+                        <h4>Interactive Backtesting & Optimization</h4>
+                        <p>Supervised backtesting with iterative parameter refinements based on ongoing client feedback.</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">⚡</div>
+                        <h4>Real-Time Algorithm Development</h4>
+                        <p>Direct client oversight during algorithm development for immediate review and adjustments.</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">📈</div>
+                        <h4>Custom Indicator Development</h4>
+                        <p>Tailored indicators or scripts developed iteratively with client validation.</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">🛡️</div>
+                        <h4>Risk and Trade Management Implementation</h4>
+                        <p>Client-specific risk management integration, validated through regular client interactions.</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">🐛</div>
+                        <h4>Debugging & Troubleshooting</h4>
+                        <p>Active collaboration to identify and fix coding issues, ensuring continuous enhancement.</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">📚</div>
+                        <h4>Documentation & Knowledge Transfer</h4>
+                        <p>Detailed documentation and interactive sessions to explain strategy functionality clearly.</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">🚀</div>
+                        <h4>Live Market Testing Support</h4>
+                        <p>Supervised assistance during initial live strategy deployment for immediate adjustments and validation.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Professional Quant Services -->
+            <div class="services-category">
+                <h3 class="category-title">Additional Professional Quant Services</h3>
+                <p class="category-subtitle">Advanced trading solutions and cutting-edge quantitative technologies</p>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <div class="service-icon">🤖</div>
+                        <h4>Custom Algorithm / Bot Development</h4>
+                        <p>Bespoke trading algorithms tailored to your specific strategies and market conditions.</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">🌲</div>
+                        <h4>Pine Script Indicator / Strategy Coding</h4>
+                        <p>Professional TradingView Pine Script development for custom indicators and strategies.</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">📊</div>
+                        <h4>Interactive Backtesting & Optimization</h4>
+                        <p>Comprehensive historical performance analysis with parameter optimization and walk-forward analysis.</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">🧠</div>
+                        <h4>Machine-Learning Alpha Research Sessions</h4>
+                        <p>Collaborative exploration of ML models for alpha discovery and predictive analytics.</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">⚖️</div>
+                        <h4>Risk-Model Design Workshops</h4>
+                        <p>Interactive sessions to design and implement sophisticated risk management frameworks.</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">🔌</div>
+                        <h4>Broker / Exchange API Integration</h4>
+                        <p>Seamless connectivity with major brokers and exchanges for automated execution.</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">☁️</div>
+                        <h4>Cloud / VPS Deployment Walk-through</h4>
+                        <p>Guided deployment of your trading systems on cloud infrastructure for 24/7 operation.</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">📡</div>
+                        <h4>Live Performance Monitoring & Tuning</h4>
+                        <p>Real-time system monitoring with continuous optimization and performance enhancement.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Transform Your Trading?</h2>
+            <p>Join the elite traders leveraging our quantitative advantage to generate superior returns</p>
+            <a href="contact.html" class="btn btn-secondary">Start Your Journey</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 QuantEdge Solutions. All rights reserved. | Transforming Markets Through Technology</p>
+        </div>
+    </footer>
+
+    <!-- Sticky Sidebar -->
+    <div class="sticky-sidebar">
+        <a href="https://wa.link/p7vans" target="_blank" class="sidebar-btn whatsapp-btn" aria-label="Contact us on WhatsApp">
+            <svg class="sidebar-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.029 18.88c-1.161 0-2.305-.292-3.318-.844l-3.677.964.98-3.686c-.592-1.029-.9-2.201-.899-3.427.002-3.398 2.762-6.156 6.162-6.156 3.405 0 6.162 2.76 6.162 6.163 0 3.401-2.762 6.162-6.164 6.162z"/>
+            </svg>
+            <div class="sidebar-tooltip">WhatsApp</div>
+        </a>
+        <a href="quick-contact.html" class="sidebar-btn contact-btn" aria-label="Leave Details">
+            <svg class="sidebar-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 8L10.89 13.26C11.2187 13.4793 11.6049 13.5963 12 13.5963C12.3951 13.5963 12.7813 13.4793 13.11 13.26L21 8M5 19H19C19.5304 19 20.0391 18.7893 20.4142 18.4142C20.7893 18.0391 21 17.5304 21 17V7C21 6.46957 20.7893 5.96086 20.4142 5.58579C20.0391 5.21071 19.5304 5 19 5H5C4.46957 5 3.96086 5.21071 3.58579 5.58579C3.21071 5.96086 3 6.46957 3 7V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19Z" stroke="currentColor" stroke-width="2" fill="none"/>
+            </svg>
+            <div class="sidebar-tooltip">Leave Details</div>
+        </a>
+    </div>
+
+    <script src="navigation.js"></script>
+    <script>
+        // Homepage specific animations and features
+        
+        // Hero stats counter animation
+        const animateValue = (obj, start, end, duration) => {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                obj.innerHTML = Math.floor(progress * (end - start) + start) + obj.dataset.suffix;
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+        };
+
+        // Animate stats on scroll
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.dataset.animated) {
+                    const statNumbers = entry.target.querySelectorAll('.stat-number');
+                    statNumbers.forEach(stat => {
+                        const value = stat.textContent.replace(/[^0-9.]/g, '');
+                        const suffix = stat.textContent.replace(/[0-9.]/g, '');
+                        stat.dataset.suffix = suffix;
+                        animateValue(stat, 0, parseFloat(value), 2000);
+                    });
+                    entry.target.dataset.animated = 'true';
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const heroStats = document.querySelector('.hero-stats');
+        if (heroStats) {
+            statsObserver.observe(heroStats);
+        }
+
+        // Dynamic trust indicators
+        setInterval(() => {
+            const statNumbers = document.querySelectorAll('.stat-number');
+            statNumbers.forEach(stat => {
+                if (Math.random() > 0.7) {
+                    stat.style.transform = 'scale(1.1)';
+                    setTimeout(() => {
+                        stat.style.transform = 'scale(1)';
+                    }, 300);
+                }
+            });
+        }, 3000);
+    </script>
+</body>
+</html>

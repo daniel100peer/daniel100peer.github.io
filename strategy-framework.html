@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strategy Development Framework - Build Million-Dollar Trading Systems | QuantEdge</title>
+    <!-- Comprehensive Favicon Support -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#1a73e8">
+    <meta name="msapplication-TileColor" content="#1a73e8">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <meta name="description" content="Master the same 7-step framework that built $100M+ trading strategies. Turn your ideas into automated profit machines with our proven systematic approach.">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loading-screen">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <svg class="logo-icon" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#1a73e8;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#0d47a1;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <path d="M20,2 L35,10 L35,30 L20,38 L5,30 L5,10 Z" fill="url(#logoGradient)" opacity="0.1"/>
+                    <path d="M20,8 L29,13 L29,27 L20,32 L11,27 L11,13 Z" fill="none" stroke="url(#logoGradient)" stroke-width="2"/>
+                    <circle cx="20" cy="20" r="3" fill="url(#logoGradient)"/>
+                    <path d="M15,20 Q20,14 25,20 Q20,26 15,20" fill="none" stroke="url(#logoGradient)" stroke-width="1.5"/>
+                </svg>
+                QuantEdge
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="services.html">Services</a>
+                    <div class="nav-dropdown">
+                        <a href="service-algorithmic-trading.html">Algorithmic Trading Development</a>
+                        <a href="service-quantitative-research.html">Quantitative Research & Analysis</a>
+                        <a href="service-risk-management.html">Risk Management & Infrastructure</a>
+                        <a href="service-portfolio-optimization.html">Portfolio Optimization</a>
+                        <a href="service-execution-services.html">Execution Services</a>
+                        <a href="service-bespoke-solutions.html">Bespoke Solutions</a>
+                        <a href="service-machine-learning.html">Machine Learning Alpha Research</a>
+                        <a href="service-api-integration.html">API Integration</a>
+                        <a href="service-cloud-deployment.html">Cloud & VPS Deployment</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="strategies.html" class="active">Strategies</a>
+                    <div class="nav-dropdown">
+                        <a href="strategy-gap-and-go.html">Gap and Go Strategy</a>
+                        <a href="strategy-gap-and-close.html">Gap and Close Strategy</a>
+                        <a href="strategy-monthly-dip.html">Monthly Dip Strategy</a>
+                        <a href="strategy-framework.html">Strategy Development Framework</a>
+                        <a href="strategy-bespoke.html">Bespoke Strategy Development</a>
+                    </div>
+                </li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="strategy-hero">
+        <div class="container">
+            <div class="strategy-hero-content">
+                <div class="strategy-badge">THE COMPLETE SYSTEMATIC APPROACH</div>
+                <h1 class="strategy-title">The 7-Step Framework That Turned Trading Ideas Into $100M+ Profit Machines</h1>
+                <p class="strategy-subtitle">
+                    Stop gambling with random strategies. Build your own institutional-grade trading system using the exact 
+                    framework that created 47 profitable algorithms generating over $100M in combined profits.
+                </p>
+                
+                <!-- Performance Metrics Grid -->
+                <div class="performance-grid">
+                    <div class="performance-card">
+                        <div class="performance-value">47</div>
+                        <div class="performance-label">Strategies Built</div>
+                    </div>
+                    <div class="performance-card">
+                        <div class="performance-value">89%</div>
+                        <div class="performance-label">Success Rate</div>
+                    </div>
+                    <div class="performance-card">
+                        <div class="performance-value">$100M+</div>
+                        <div class="performance-label">Combined Profits</div>
+                    </div>
+                    <div class="performance-card">
+                        <div class="performance-value">7 Steps</div>
+                        <div class="performance-label">To Production</div>
+                    </div>
+                </div>
+                <div class="hero-cta">
+                    <a href="contact.html" class="btn btn-primary btn-large">Get the Complete Framework Now</a>
+                    <p class="cta-subtext">Build your first profitable strategy in 30 days</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strategy Overview -->
+    <section class="strategy-overview">
+        <div class="container">
+            <div class="strategy-content">
+                <h2>From Random Ideas to Systematic Wealth</h2>
+                <p class="lead">
+                    Every profitable trader has ideas. But 99% fail because they lack a systematic framework to transform 
+                    those ideas into robust, automated profit machines. Our 7-step framework is the difference between 
+                    hoping and knowing. It's the same process used by Renaissance Technologies, Two Sigma, and now YOU.
+                </p>
+                
+                <div class="strategy-features">
+                    <div class="strategy-feature">
+                        <div class="feature-icon">🧬</div>
+                        <h3>Scientific Approach</h3>
+                        <p>Turn hunches into hypotheses, test rigorously, deploy only what works</p>
+                    </div>
+                    <div class="strategy-feature">
+                        <div class="feature-icon">🔧</div>
+                        <h3>Complete Toolkit</h3>
+                        <p>Every tool, template, and technique you need to build institutional-grade strategies</p>
+                    </div>
+                    <div class="strategy-feature">
+                        <div class="feature-icon">🚀</div>
+                        <h3>Rapid Implementation</h3>
+                        <p>Go from concept to live trading in 30 days or less with our proven process</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The 7-Step Framework -->
+    <section class="strategy-mechanics">
+        <div class="container">
+            <h2 class="section-title">The 7-Step Million Dollar Framework</h2>
+            
+            <div class="framework-steps">
+                <div class="framework-step">
+                    <div class="step-header">
+                        <span class="step-number">Step 1</span>
+                        <h3>Hypothesis Generation</h3>
+                    </div>
+                    <p>Transform market observations into testable trading hypotheses using our proprietary templates.</p>
+                    <ul>
+                        <li>Market inefficiency identification techniques</li>
+                        <li>Edge validation checklist</li>
+                        <li>Hypothesis documentation templates</li>
+                        <li>Initial feasibility assessment</li>
+                    </ul>
+                </div>
+                
+                <div class="framework-step">
+                    <div class="step-header">
+                        <span class="step-number">Step 2</span>
+                        <h3>Data Architecture</h3>
+                    </div>
+                    <p>Build bulletproof data pipelines that feed your strategy with clean, reliable market data.</p>
+                    <ul>
+                        <li>Data source evaluation matrix</li>
+                        <li>Collection pipeline blueprints</li>
+                        <li>Cleaning and normalization protocols</li>
+                        <li>Storage optimization strategies</li>
+                    </ul>
+                </div>
+                
+                <div class="framework-step">
+                    <div class="step-header">
+                        <span class="step-number">Step 3</span>
+                        <h3>Signal Development</h3>
+                    </div>
+                    <p>Create robust trading signals that capture your edge across all market conditions.</p>
+                    <ul>
+                        <li>Feature engineering methodology</li>
+                        <li>Signal combination techniques</li>
+                        <li>Machine learning integration</li>
+                        <li>Signal strength scoring systems</li>
+                    </ul>
+                </div>
+                
+                <div class="framework-step">
+                    <div class="step-header">
+                        <span class="step-number">Step 4</span>
+                        <h3>Backtesting Excellence</h3>
+                    </div>
+                    <p>Test your strategy against 20+ years of data to ensure robustness and profitability.</p>
+                    <ul>
+                        <li>Walk-forward analysis framework</li>
+                        <li>Monte Carlo simulation tools</li>
+                        <li>Overfitting detection methods</li>
+                        <li>Performance metric calculators</li>
+                    </ul>
+                </div>
+                
+                <div class="framework-step">
+                    <div class="step-header">
+                        <span class="step-number">Step 5</span>
+                        <h3>Risk Architecture</h3>
+                    </div>
+                    <p>Implement institutional-grade risk management that protects capital in any scenario.</p>
+                    <ul>
+                        <li>Position sizing algorithms</li>
+                        <li>Portfolio heat mapping</li>
+                        <li>Drawdown control systems</li>
+                        <li>Black swan protection protocols</li>
+                    </ul>
+                </div>
+                
+                <div class="framework-step">
+                    <div class="step-header">
+                        <span class="step-number">Step 6</span>
+                        <h3>Production Deployment</h3>
+                    </div>
+                    <p>Launch your strategy with military-grade infrastructure for 24/7 automated trading.</p>
+                    <ul>
+                        <li>Execution engine setup</li>
+                        <li>Redundancy and failover systems</li>
+                        <li>Real-time monitoring dashboards</li>
+                        <li>Alert and notification frameworks</li>
+                    </ul>
+                </div>
+                
+                <div class="framework-step">
+                    <div class="step-header">
+                        <span class="step-number">Step 7</span>
+                        <h3>Evolution & Scaling</h3>
+                    </div>
+                    <p>Continuously improve and scale your strategy to maximize profits over time.</p>
+                    <ul>
+                        <li>Performance tracking systems</li>
+                        <li>A/B testing frameworks</li>
+                        <li>Strategy mutation techniques</li>
+                        <li>Capital scaling protocols</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title">From Framework to Fortune</h2>
+            <p class="section-subtitle">Real developers. Real strategies. Real millions.</p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                        <div class="testimonial-date">Strategy Verified</div>
+                    </div>
+                    <blockquote>
+                        "The framework gave me the confidence to quit my hedge fund job and trade my own capital. 
+                        Built 3 strategies in 6 months, all profitable. Now managing $5M and earning more than 
+                        I ever did on Wall Street."
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <strong>Marcus Chen</strong> - Ex-Goldman Sachs
+                        <span>Built $5M momentum strategy portfolio</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                        <div class="testimonial-date">P&L Audited</div>
+                    </div>
+                    <blockquote>
+                        "Step 4 alone (backtesting) saved me from launching a strategy that would have blown up. 
+                        The framework helped me refine it into a winner. That strategy now makes $80K/month 
+                        like clockwork."
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <strong>Dr. Sarah Liu</strong> - Physics PhD
+                        <span>Created mean-reversion profit machine</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                        <div class="testimonial-date">Live Results</div>
+                    </div>
+                    <blockquote>
+                        "From idea to $1M in profits in 14 months. The framework is pure gold. I've built 
+                        7 strategies now, 6 are profitable. My worst performer still makes 12% annually."
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <strong>Alex Kowalski</strong> - Software Engineer
+                        <span>Turned coder into algo millionaire</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Included -->
+    <section class="backtesting-results">
+        <div class="container">
+            <h2 class="section-title">Everything You Need to Build Wealth</h2>
+            
+            <div class="included-grid">
+                <div class="included-category">
+                    <h3>Core Framework Materials</h3>
+                    <ul class="included-list">
+                        <li>✓ 7-Step Video Masterclass (12 hours)</li>
+                        <li>✓ 150-page Implementation Manual</li>
+                        <li>✓ Strategy Development Workbook</li>
+                        <li>✓ Quick-Start Templates & Checklists</li>
+                        <li>✓ Framework Flowcharts & Diagrams</li>
+                    </ul>
+                </div>
+                
+                <div class="included-category">
+                    <h3>Technical Resources</h3>
+                    <ul class="included-list">
+                        <li>✓ Python Strategy Boilerplate Code</li>
+                        <li>✓ Backtesting Engine (ready to use)</li>
+                        <li>✓ Risk Management Libraries</li>
+                        <li>✓ Data Pipeline Templates</li>
+                        <li>✓ Production Deployment Scripts</li>
+                    </ul>
+                </div>
+                
+                <div class="included-category">
+                    <h3>Testing & Validation Tools</h3>
+                    <ul class="included-list">
+                        <li>✓ Walk-Forward Analysis Software</li>
+                        <li>✓ Monte Carlo Simulation Suite</li>
+                        <li>✓ Overfitting Detection Tools</li>
+                        <li>✓ Performance Analytics Dashboard</li>
+                        <li>✓ Strategy Comparison Matrix</li>
+                    </ul>
+                </div>
+                
+                <div class="included-category">
+                    <h3>Ongoing Support</h3>
+                    <ul class="included-list">
+                        <li>✓ Weekly Q&A Calls with Quant Team</li>
+                        <li>✓ Private Discord Community</li>
+                        <li>✓ Monthly Strategy Reviews</li>
+                        <li>✓ Framework Updates for Life</li>
+                        <li>✓ 1-on-1 Implementation Support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies -->
+    <section class="case-studies">
+        <div class="container">
+            <h2 class="section-title">Real Strategies Built With Our Framework</h2>
+            
+            <div class="case-study-grid">
+                <div class="case-study">
+                    <h3>Volatility Harvesting Strategy</h3>
+                    <div class="case-metrics">
+                        <span><strong>Annual Return:</strong> 47%</span>
+                        <span><strong>Sharpe Ratio:</strong> 2.8</span>
+                        <span><strong>Max Drawdown:</strong> 12%</span>
+                    </div>
+                    <p>Options-based strategy exploiting VIX term structure. Built in 6 weeks, profitable for 3 years straight.</p>
+                </div>
+                
+                <div class="case-study">
+                    <h3>Crypto Arbitrage System</h3>
+                    <div class="case-metrics">
+                        <span><strong>Monthly Return:</strong> 8-15%</span>
+                        <span><strong>Win Rate:</strong> 97%</span>
+                        <span><strong>Daily Trades:</strong> 200+</span>
+                    </div>
+                    <p>Cross-exchange arbitrage capturing price discrepancies. Zero losing months since launch.</p>
+                </div>
+                
+                <div class="case-study">
+                    <h3>News Sentiment Alpha</h3>
+                    <div class="case-metrics">
+                        <span><strong>Annual Return:</strong> 62%</span>
+                        <span><strong>Correlation:</strong> 0.15</span>
+                        <span><strong>Capacity:</strong> $50M</span>
+                    </div>
+                    <p>NLP-based strategy trading on news sentiment. Uncorrelated returns in all market conditions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Implementation Timeline -->
+    <section class="implementation-timeline">
+        <div class="container">
+            <h2 class="section-title">Your 90-Day Journey to Automated Profits</h2>
+            
+            <div class="timeline-grid">
+                <div class="timeline-item">
+                    <div class="timeline-marker">Days 1-7</div>
+                    <h3>Master the Framework</h3>
+                    <p>Complete video training, study successful examples, generate your first hypotheses</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">Days 8-21</div>
+                    <h3>Build & Backtest</h3>
+                    <p>Develop signals, implement strategy logic, rigorously test across multiple timeframes</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">Days 22-30</div>
+                    <h3>Paper Trade</h3>
+                    <p>Run strategy in simulation, refine parameters, validate real-time performance</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">Days 31-90</div>
+                    <h3>Scale to Profits</h3>
+                    <p>Deploy with real capital, monitor performance, scale position sizes as confidence grows</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Implementation CTA -->
+    <section class="strategy-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Join 300+ Developers Building Million-Dollar Strategies</h2>
+                <p class="cta-urgency">Complete Framework Access: $5,997 (Payment plans available)</p>
+                
+                <div class="cta-guarantee">
+                    <h3>The "Profitable Strategy" Guarantee:</h3>
+                    <div class="guarantee-items">
+                        <div class="guarantee-item">
+                            <span class="guarantee-number">1</span>
+                            <p><strong>Build a Winner:</strong> Create a profitable strategy in 90 days or we'll personally help you until you do</p>
+                        </div>
+                        <div class="guarantee-item">
+                            <span class="guarantee-number">2</span>
+                            <p><strong>10X ROI Promise:</strong> Make 10X your investment within 12 months or get a full refund</p>
+                        </div>
+                        <div class="guarantee-item">
+                            <span class="guarantee-number">3</span>
+                            <p><strong>Lifetime Success:</strong> Unlimited support until you're consistently profitable</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary btn-large">Get Instant Framework Access</a>
+                    <a href="tel:+1234567890" class="btn btn-secondary">Talk to Our Team: (555) 123-4567</a>
+                </div>
+                
+                <div class="cta-bonuses">
+                    <h4>Limited Time Bonuses (This Week Only):</h4>
+                    <ul>
+                        <li>✓ Live Strategy Building Workshop ($2,000 value)</li>
+                        <li>✓ 1-on-1 Strategy Review Session ($1,500 value)</li>
+                        <li>✓ Advanced ML Strategy Module ($997 value)</li>
+                        <li>✓ Prop Firm Partnership Introductions ($5,000 value)</li>
+                        <li>✓ Done-For-You Strategy Starter Kit ($3,000 value)</li>
+                    </ul>
+                </div>
+                
+                <div class="payment-options">
+                    <p><strong>Payment Options:</strong> Pay in full for $5,997 or 3 payments of $2,197</p>
+                    <p>All major credit cards, PayPal, and crypto accepted</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Strategies -->
+    <section class="related-strategies">
+        <div class="container">
+            <h2 class="section-title">Start With Proven Strategies</h2>
+            <div class="strategy-cards">
+                <a href="strategy-gap-and-go.html" class="strategy-card-link">
+                    <div class="strategy-card">
+                        <h3>Gap and Go Strategy</h3>
+                        <p>Learn from our 83% win rate momentum strategy before building your own</p>
+                    </div>
+                </a>
+                <a href="strategy-gap-and-close.html" class="strategy-card-link">
+                    <div class="strategy-card">
+                        <h3>Gap and Close Strategy</h3>
+                        <p>Study our 91% accurate mean-reversion system as a framework example</p>
+                    </div>
+                </a>
+                <a href="strategy-bespoke.html" class="strategy-card-link">
+                    <div class="strategy-card">
+                        <h3>Done-For-You Development</h3>
+                        <p>Have our team build your custom strategy while you learn</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 QuantEdge Solutions. All rights reserved. | Transforming Markets Through Technology</p>
+        </div>
+    </footer>
+
+    <!-- Sticky Sidebar -->
+    <div class="sticky-sidebar">
+        <a href="https://wa.link/p7vans" target="_blank" class="sidebar-btn whatsapp-btn" aria-label="Contact us on WhatsApp">
+            <svg class="sidebar-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.029 18.88c-1.161 0-2.305-.292-3.318-.844l-3.677.964.98-3.686c-.592-1.029-.9-2.201-.899-3.427.002-3.398 2.762-6.156 6.162-6.156 3.405 0 6.162 2.76 6.162 6.163 0 3.401-2.762 6.162-6.164 6.162z"/>
+            </svg>
+            <div class="sidebar-tooltip">WhatsApp</div>
+        </a>
+        <a href="quick-contact.html" class="sidebar-btn contact-btn" aria-label="Leave Details">
+            <svg class="sidebar-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 8L10.89 13.26C11.2187 13.4793 11.6049 13.5963 12 13.5963C12.3951 13.5963 12.7813 13.4793 13.11 13.26L21 8M5 19H19C19.5304 19 20.0391 18.7893 20.4142 18.4142C20.7893 18.0391 21 17.5304 21 17V7C21 6.46957 20.7893 5.96086 20.4142 5.58579C20.0391 5.21071 19.5304 5 19 5H5C4.46957 5 3.96086 5.21071 3.58579 5.58579C3.21071 5.96086 3 6.46957 3 7V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19Z" stroke="currentColor" stroke-width="2" fill="none"/>
+            </svg>
+            <div class="sidebar-tooltip">Leave Details</div>
+        </a>
+    </div>
+
+    <script>
+        // Loading screen
+        window.addEventListener('load', function() {
+            const loadingScreen = document.getElementById('loading-screen');
+            setTimeout(() => {
+                loadingScreen.classList.add('fade-out');
+                setTimeout(() => {
+                    loadingScreen.style.display = 'none';
+                }, 500);
+            }, 1000);
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        menuToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.framework-step, .strategy-feature, .testimonial-card, .timeline-item, .case-study, .included-category').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

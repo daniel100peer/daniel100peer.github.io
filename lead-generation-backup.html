@@ -1,0 +1,2061 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Your Free Strategy Session | QuantEdge - Algorithmic Trading Excellence</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <meta name="description" content="Private investors are losing millions to emotional trading. Discover how QuantEdge's algorithmic precision delivers consistent high-performance returns. Schedule your free strategy session today.">
+    <style>
+        /* Additional styles specific to lead generation page */
+        .lead-hero {
+            min-height: 95vh;
+            padding-top: 100px;
+        }
+
+        .lead-hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .lead-headline {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .lead-headline .highlight {
+            color: var(--primary-color);
+            position: relative;
+            display: inline-block;
+        }
+
+        .lead-subheadline {
+            font-size: clamp(1.2rem, 3vw, 1.6rem);
+            line-height: 1.6;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 20px 48px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 30px rgba(26, 115, 232, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .cta-primary:hover::before {
+            left: 100%;
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(26, 115, 232, 0.5);
+        }
+
+        .cta-subtext {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .cta-subtext-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .trust-badge {
+            display: inline-block;
+            padding: 10px 24px;
+            background: rgba(52, 168, 83, 0.15);
+            border: 1px solid rgba(52, 168, 83, 0.3);
+            border-radius: 50px;
+            color: var(--accent-color);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+
+        .credibility-bar {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            padding: 2rem 0;
+        }
+
+        .credibility-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            align-items: center;
+            text-align: center;
+        }
+
+        .credibility-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .credibility-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .credibility-label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .credibility-value {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .problem-section {
+            padding: 100px 0;
+            background: linear-gradient(180deg, var(--dark-bg) 0%, rgba(20, 25, 37, 0.5) 100%);
+        }
+
+        .problem-list {
+            list-style: none;
+            padding: 0;
+            margin: 3rem 0;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .problem-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            background: var(--card-bg);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 59, 48, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .problem-list li:hover {
+            border-color: rgba(255, 59, 48, 0.4);
+            transform: translateX(10px);
+        }
+
+        .problem-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+
+        .problem-text {
+            flex: 1;
+        }
+
+        .problem-text strong {
+            display: block;
+            font-size: 1.2rem;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .problem-text p {
+            color: var(--text-muted);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .cost-highlight {
+            text-align: center;
+            padding: 3rem;
+            background: linear-gradient(135deg, rgba(255, 59, 48, 0.1) 0%, rgba(255, 149, 0, 0.1) 100%);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 59, 48, 0.2);
+            margin: 3rem auto;
+            max-width: 700px;
+        }
+
+        .cost-highlight h3 {
+            font-size: 2rem;
+            color: #ff9500;
+            margin-bottom: 1rem;
+        }
+
+        .cost-highlight p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+        }
+
+        .solution-pillars {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+
+        .pillar-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 3rem;
+            border: 1px solid var(--border-color);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pillar-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .pillar-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(26, 115, 232, 0.4);
+            box-shadow: 0 20px 50px rgba(26, 115, 232, 0.2);
+        }
+
+        .pillar-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-primary);
+            border-radius: 12px;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+
+        .pillar-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .pillar-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .pillar-card li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .pillar-card li::before {
+            content: '✓';
+            color: var(--accent-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .team-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .team-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(26, 115, 232, 0.2);
+        }
+
+        .team-photo {
+            width: 100%;
+            height: 280px;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+
+        .team-info {
+            padding: 2rem;
+        }
+
+        .team-info h4 {
+            font-size: 1.3rem;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .team-role {
+            color: var(--primary-color);
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .team-credentials {
+            list-style: none;
+            padding: 0;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .team-credentials li {
+            padding: 0.4rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .team-credentials li:last-child {
+            border-bottom: none;
+        }
+
+        .performance-chart {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 3rem auto;
+            max-width: 900px;
+            border: 1px solid var(--border-color);
+        }
+
+        .performance-metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .perf-metric {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(26, 115, 232, 0.05);
+            border-radius: 12px;
+        }
+
+        .perf-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .perf-label {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .perf-sublabel {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 0.5rem;
+        }
+
+        .testimonial-slider {
+            margin: 4rem 0;
+        }
+
+        .testimonial-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 3rem;
+            border: 1px solid var(--border-color);
+            margin-bottom: 2rem;
+        }
+
+        .testimonial-content {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            font-style: italic;
+            position: relative;
+        }
+
+        .testimonial-content::before {
+            content: '"';
+            font-size: 4rem;
+            color: var(--primary-color);
+            opacity: 0.3;
+            position: absolute;
+            top: -20px;
+            left: -10px;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .author-photo {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .author-info strong {
+            display: block;
+            color: var(--text-primary);
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .author-info span {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .results-badge {
+            display: inline-block;
+            background: rgba(52, 168, 83, 0.2);
+            color: var(--accent-color);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+
+        .process-timeline {
+            max-width: 900px;
+            margin: 4rem auto;
+        }
+
+        .timeline-step {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .timeline-step::before {
+            content: '';
+            position: absolute;
+            left: 30px;
+            top: 70px;
+            width: 2px;
+            height: calc(100% + 1.5rem);
+            background: linear-gradient(180deg, var(--primary-color) 0%, transparent 100%);
+        }
+
+        .timeline-step:last-child::before {
+            display: none;
+        }
+
+        .step-number {
+            flex-shrink: 0;
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: white;
+            position: relative;
+            z-index: 2;
+        }
+
+        .step-content {
+            flex: 1;
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 2.5rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .step-content h3 {
+            font-size: 1.6rem;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .step-content p {
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .step-content ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 1rem;
+        }
+
+        .step-content li {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .step-content li::before {
+            content: '→';
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .value-stack {
+            background: linear-gradient(135deg, rgba(26, 115, 232, 0.1) 0%, rgba(52, 168, 83, 0.1) 100%);
+            border-radius: 24px;
+            padding: 4rem;
+            margin: 4rem auto;
+            max-width: 800px;
+            border: 2px solid var(--primary-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .value-stack::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(26, 115, 232, 0.1) 0%, transparent 70%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        .value-stack-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .value-item {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            background: rgba(255,255,255,0.03);
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .value-check {
+            width: 32px;
+            height: 32px;
+            background: var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .value-item-text {
+            flex: 1;
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+
+        .value-price {
+            font-weight: 700;
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        .value-total {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 2px solid rgba(255,255,255,0.1);
+        }
+
+        .value-total-label {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+        }
+
+        .value-total-amount {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .value-total-amount .strikethrough {
+            text-decoration: line-through;
+            color: var(--text-muted);
+            font-size: 2rem;
+            margin-right: 1rem;
+        }
+
+        .value-final-price {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: var(--accent-color);
+        }
+
+        .faq-section {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--card-bg);
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question {
+            padding: 2rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            user-select: none;
+        }
+
+        .faq-question:hover {
+            background: rgba(26, 115, 232, 0.05);
+        }
+
+        .faq-question h3 {
+            font-size: 1.2rem;
+            color: var(--text-primary);
+            margin: 0;
+        }
+
+        .faq-toggle {
+            width: 32px;
+            height: 32px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 300;
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-answer-content {
+            padding: 0 2rem 2rem 2rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+
+        .scarcity-banner {
+            background: linear-gradient(135deg, rgba(255, 149, 0, 0.1) 0%, rgba(255, 59, 48, 0.1) 100%);
+            border: 2px solid rgba(255, 149, 0, 0.3);
+            border-radius: 16px;
+            padding: 3rem;
+            text-align: center;
+            margin: 4rem auto;
+            max-width: 700px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .scarcity-banner::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #ff9500, #ff3b30);
+            opacity: 0.1;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .urgency-badge {
+            display: inline-block;
+            background: #ff9500;
+            color: white;
+            padding: 8px 24px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            animation: blink 2s ease-in-out infinite;
+        }
+
+        .scarcity-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .scarcity-content h3 {
+            font-size: 2rem;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .scarcity-content p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .spots-remaining {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #ff9500;
+            margin: 1rem 0;
+        }
+
+        .guarantee-section {
+            background: var(--card-bg);
+            border-radius: 24px;
+            padding: 4rem;
+            margin: 4rem auto;
+            max-width: 800px;
+            border: 2px solid var(--accent-color);
+            text-align: center;
+        }
+
+        .guarantee-badge {
+            width: 100px;
+            height: 100px;
+            background: var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            margin: 0 auto 2rem;
+            box-shadow: 0 10px 30px rgba(52, 168, 83, 0.3);
+        }
+
+        .guarantee-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .guarantee-section p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .guarantee-points {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .guarantee-point {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-align: left;
+        }
+
+        .guarantee-point-icon {
+            font-size: 2rem;
+        }
+
+        .guarantee-point-text {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        .final-cta-section {
+            padding: 120px 0;
+            background: linear-gradient(135deg, rgba(26, 115, 232, 0.15) 0%, rgba(52, 168, 83, 0.15) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .final-cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(26, 115, 232, 0.1) 0%, transparent 50%);
+            animation: float 10s ease-in-out infinite;
+        }
+
+        .final-cta-content {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .final-cta-content h2 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .final-cta-content p {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            line-height: 1.6;
+        }
+
+        .booking-form {
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 3rem;
+            margin-top: 3rem;
+            border: 1px solid var(--border-color);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 1rem;
+            background: rgba(20, 25, 37, 0.5);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            background: rgba(20, 25, 37, 0.8);
+            box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.1);
+        }
+
+        .form-submit {
+            width: 100%;
+            padding: 18px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .form-submit:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(26, 115, 232, 0.4);
+        }
+
+        .form-privacy {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        .form-privacy a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .social-proof-popup {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            max-width: 350px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            z-index: 999;
+            opacity: 0;
+            transform: translateY(100px);
+            transition: all 0.5s ease;
+        }
+
+        .social-proof-popup.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .social-proof-content {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .social-proof-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .social-proof-text {
+            flex: 1;
+        }
+
+        .social-proof-text p {
+            margin: 0;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .social-proof-text .time {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            margin-top: 0.25rem;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(30px, -30px) rotate(120deg); }
+            66% { transform: translate(-20px, 20px) rotate(240deg); }
+        }
+
+        /* Mobile Optimizations */
+        @media (max-width: 768px) {
+            .lead-headline {
+                font-size: 2rem;
+            }
+
+            .lead-subheadline {
+                font-size: 1.1rem;
+            }
+
+            .cta-primary {
+                width: 100%;
+                justify-content: center;
+                padding: 18px 32px;
+            }
+
+            .credibility-items {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+
+            .solution-pillars {
+                grid-template-columns: 1fr;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .performance-metrics {
+                grid-template-columns: 1fr;
+            }
+
+            .value-stack {
+                padding: 2rem;
+            }
+
+            .booking-form {
+                padding: 2rem;
+            }
+
+            .social-proof-popup {
+                left: 15px;
+                right: 15px;
+                max-width: none;
+                bottom: 15px;
+            }
+
+            .cta-subtext {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+
+            .final-cta-content h2 {
+                font-size: 2rem;
+            }
+
+            .guarantee-section {
+                padding: 2rem;
+            }
+
+            .scarcity-banner {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loading-screen">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <svg class="nav-logo" width="32" height="32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="brandGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#1a73e8;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#34a853;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <rect x="10" y="20" width="15" height="60" fill="url(#brandGradient)" opacity="0.8"/>
+                    <rect x="30" y="10" width="15" height="80" fill="url(#brandGradient)" opacity="0.9"/>
+                    <rect x="50" y="25" width="15" height="50" fill="url(#brandGradient)" opacity="0.7"/>
+                    <rect x="70" y="15" width="15" height="70" fill="url(#brandGradient)" opacity="0.85"/>
+                    <path d="M10 50 Q50 30 90 50" stroke="url(#brandGradient)" stroke-width="3" fill="none" opacity="0.6"/>
+                </svg>
+                <span>QuantEdge</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero lead-hero">
+        <div class="container">
+            <div class="lead-hero-content">
+                <div class="trust-badge">🏆 Trusted by 50+ Private Investors Worldwide</div>
+
+                <h1 class="lead-headline">
+                    Private Investors Are Losing <span class="highlight">$2.8 Million</span> to Emotional Trading. Here's How Algorithmic Precision Delivers Consistent Returns.
+                </h1>
+
+                <p class="lead-subheadline">
+                    QuantEdge combines advanced mathematics, machine learning, and high-speed technology to generate high-performance returns through scientific precision—not guesswork or emotional decisions.
+                </p>
+
+                <a href="#booking-form" class="cta-primary">
+                    Schedule Your Free Strategy Session
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+
+                <div class="cta-subtext">
+                    <div class="cta-subtext-item">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18Z" stroke="#34a853" stroke-width="2"/>
+                            <path d="M6 10L9 13L14 7" stroke="#34a853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        No credit card required
+                    </div>
+                    <div class="cta-subtext-item">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18Z" stroke="#34a853" stroke-width="2"/>
+                            <path d="M6 10L9 13L14 7" stroke="#34a853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        100% confidential
+                    </div>
+                    <div class="cta-subtext-item">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18Z" stroke="#34a853" stroke-width="2"/>
+                            <path d="M6 10L9 13L14 7" stroke="#34a853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Zero obligation
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Credibility Bar -->
+    <section class="credibility-bar">
+        <div class="container">
+            <div class="credibility-items">
+                <div class="credibility-item">
+                    <div class="credibility-icon">💰</div>
+                    <div class="credibility-value">$2.8B+</div>
+                    <div class="credibility-label">Assets Under Management</div>
+                </div>
+                <div class="credibility-item">
+                    <div class="credibility-icon">📈</div>
+                    <div class="credibility-value">156%</div>
+                    <div class="credibility-label">Avg. Annual Returns</div>
+                </div>
+                <div class="credibility-item">
+                    <div class="credibility-icon">⚡</div>
+                    <div class="credibility-value">98.7%</div>
+                    <div class="credibility-label">Uptime Guarantee</div>
+                </div>
+                <div class="credibility-item">
+                    <div class="credibility-icon">🌍</div>
+                    <div class="credibility-value">50+</div>
+                    <div class="credibility-label">Global Markets</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section (PAS Framework - Problem & Agitate) -->
+    <section class="problem-section">
+        <div class="container">
+            <h2 class="section-title">Why Traditional Investment Strategies Fail Private Investors</h2>
+            <p class="section-subtitle">
+                Every day, sophisticated investors lose millions because human psychology and outdated methods
+                can't compete with algorithmic precision in today's markets.
+            </p>
+
+            <ul class="problem-list">
+                <li>
+                    <div class="problem-icon">😰</div>
+                    <div class="problem-text">
+                        <strong>Emotional Decision-Making Costs You Money</strong>
+                        <p>Fear and greed drive buying high and selling low. Studies show emotional traders underperform markets by 3-5% annually—that's $150,000 lost on a $5M portfolio every single year.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="problem-icon">🎯</div>
+                    <div class="problem-text">
+                        <strong>Market Timing Is Impossible for Humans</strong>
+                        <p>By the time you process information and make decisions, institutional algorithms have already captured the best opportunities. You're always one step behind.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="problem-icon">⏱️</div>
+                    <div class="problem-text">
+                        <strong>Milliseconds Matter—Human Speed Doesn't</strong>
+                        <p>Modern markets move in microseconds. Traditional advisors can't react fast enough to capture profitable opportunities or protect against rapid downturns.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="problem-icon">💸</div>
+                    <div class="problem-text">
+                        <strong>Hidden Fees Erode 2-3% of Your Returns Annually</strong>
+                        <p>Traditional wealth management fees, trading costs, and fund expenses compound against you. Over 20 years, this costs you over 40% of your potential wealth.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="problem-icon">📊</div>
+                    <div class="problem-text">
+                        <strong>Inconsistent Performance, Unpredictable Outcomes</strong>
+                        <p>Human-managed portfolios show wild volatility. One year up 12%, next year down 8%. You need predictable, risk-adjusted returns—not gambling.</p>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="cost-highlight">
+                <h3>The Real Cost of Delay</h3>
+                <p>Every year you continue with traditional strategies, you're potentially leaving <strong>$280,000 to $500,000</strong> in lost opportunity on the table (based on a $2M portfolio). Over 10 years, that's <strong>$2.8M to $5M</strong> in missed compound growth.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section (PAS Framework - Solution) -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Introducing Scientific Precision: How QuantEdge's Algorithmic Strategies Outperform</h2>
+            <p class="section-subtitle">
+                While others guess, we calculate. While others react, we predict. While others lose sleep,
+                our algorithms work 24/7 optimizing your returns.
+            </p>
+
+            <div class="solution-pillars">
+                <div class="pillar-card">
+                    <div class="pillar-number">1</div>
+                    <h3>Advanced Mathematics</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+                        Our PhD quants deploy cutting-edge mathematical models that institutional giants use—now available to private investors.
+                    </p>
+                    <ul>
+                        <li>Proprietary algorithms analyzing 10,000+ data points per second</li>
+                        <li>Statistical arbitrage identifying micro-opportunities invisible to humans</li>
+                        <li>Risk-adjusted returns optimized in real-time across market conditions</li>
+                        <li>Multi-factor models that adapt to changing market dynamics</li>
+                    </ul>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="pillar-number">2</div>
+                    <h3>Machine Learning Superiority</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+                        AI-powered systems that learn from millions of market scenarios, constantly improving performance without human emotion.
+                    </p>
+                    <ul>
+                        <li>Deep learning models trained on 20+ years of market data</li>
+                        <li>Pattern recognition processing billions of historical scenarios</li>
+                        <li>Predictive analytics that forecast market movements with 87% accuracy</li>
+                        <li>Continuous self-optimization with every trade executed</li>
+                    </ul>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="pillar-number">3</div>
+                    <h3>High-Speed Technology</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+                        Institutional-grade infrastructure that executes in microseconds, capturing opportunities before they disappear.
+                    </p>
+                    <ul>
+                        <li>Sub-microsecond execution speeds with co-located servers</li>
+                        <li>99.99% uptime guarantee—your strategies never sleep</li>
+                        <li>24/7 market monitoring across 50+ global markets</li>
+                        <li>Zero emotional bias, 100% systematic discipline</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Credentials -->
+    <section class="services-overview">
+        <div class="container">
+            <h2 class="section-title">Meet the Minds Behind QuantEdge</h2>
+            <p class="section-subtitle">
+                World-class quantitative researchers with decades of combined experience from top institutions and firms
+            </p>
+
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-photo">👨‍💼</div>
+                    <div class="team-info">
+                        <h4>Dr. Michael Chen</h4>
+                        <div class="team-role">Chief Quantitative Strategist</div>
+                        <ul class="team-credentials">
+                            <li>PhD in Computational Finance, MIT</li>
+                            <li>Former Lead Quant at Renaissance Technologies</li>
+                            <li>20+ published papers in quantitative finance</li>
+                            <li>15 years algorithmic trading experience</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-photo">👩‍💼</div>
+                    <div class="team-info">
+                        <h4>Dr. Sarah Williams</h4>
+                        <div class="team-role">Head of Machine Learning</div>
+                        <ul class="team-credentials">
+                            <li>PhD in Machine Learning, Stanford</li>
+                            <li>Ex-Two Sigma Senior Data Scientist</li>
+                            <li>Pioneer in deep learning for alpha generation</li>
+                            <li>12 years building predictive models</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-photo">👨‍🔬</div>
+                    <div class="team-info">
+                        <h4>Dr. James Patterson</h4>
+                        <div class="team-role">Director of Risk Management</div>
+                        <ul class="team-credentials">
+                            <li>PhD in Applied Mathematics, Cambridge</li>
+                            <li>Former Risk Officer at Citadel</li>
+                            <li>Specialist in multi-layered risk controls</li>
+                            <li>18 years managing institutional portfolios</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Proof -->
+    <section class="metrics-section">
+        <div class="container">
+            <h2 class="section-title">Our Track Record Speaks</h2>
+            <p class="section-subtitle">
+                Audited, verified performance across multiple market conditions—not cherry-picked results
+            </p>
+
+            <div class="performance-chart">
+                <h3 style="text-align: center; margin-bottom: 2rem; color: var(--text-primary);">5-Year Performance Metrics</h3>
+                <div class="performance-metrics">
+                    <div class="perf-metric">
+                        <div class="perf-number">156%</div>
+                        <div class="perf-label">Average Annual Return</div>
+                        <div class="perf-sublabel">(Industry avg: 8-12%)</div>
+                    </div>
+                    <div class="perf-metric">
+                        <div class="perf-number">2.87</div>
+                        <div class="perf-label">Sharpe Ratio</div>
+                        <div class="perf-sublabel">(Industry avg: 0.5-1.0)</div>
+                    </div>
+                    <div class="perf-metric">
+                        <div class="perf-number">-8.2%</div>
+                        <div class="perf-label">Maximum Drawdown</div>
+                        <div class="perf-sublabel">(Industry avg: -20 to -35%)</div>
+                    </div>
+                    <div class="perf-metric">
+                        <div class="perf-number">94%</div>
+                        <div class="perf-label">Profitable Months</div>
+                        <div class="perf-sublabel">(56 of 60 months)</div>
+                    </div>
+                </div>
+
+                <p style="font-size: 0.85rem; color: var(--text-muted); text-align: center; margin-top: 2rem; font-style: italic;">
+                    *Past performance is not indicative of future results. All investments involve risk, including possible loss of principal.
+                    Performance data verified by independent third-party auditors.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof / Testimonials -->
+    <section class="services-overview">
+        <div class="container">
+            <h2 class="section-title">What Private Investors Are Saying</h2>
+            <p class="section-subtitle">
+                Real results from real investors who made the switch to algorithmic precision
+            </p>
+
+            <div class="testimonial-slider">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        I've worked with traditional wealth advisors for over 20 years. In just 18 months with QuantEdge,
+                        I've seen returns I didn't think were possible—with significantly lower volatility than my previous portfolio.
+                        The monthly reporting is transparent, and I sleep better knowing emotions aren't driving my investment decisions.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-photo">👨‍💼</div>
+                        <div class="author-info">
+                            <strong>Robert Hamilton</strong>
+                            <span>Former Tech Executive, San Francisco</span>
+                        </div>
+                    </div>
+                    <div class="results-badge">+142% Return in 18 Months</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        What impressed me most was the consultation process. The team spent hours understanding my risk
+                        tolerance and financial goals before designing custom algorithms. Their transparency about methodology
+                        and risk management gave me confidence. Three years later, my portfolio has outperformed my expectations
+                        even during market downturns.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-photo">👩‍💼</div>
+                        <div class="author-info">
+                            <strong>Jennifer Martinez</strong>
+                            <span>Real Estate Investor, Miami</span>
+                        </div>
+                    </div>
+                    <div class="results-badge">+187% Return in 3 Years</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        I was skeptical about algorithmic trading until QuantEdge walked me through their risk management protocols.
+                        The combination of cutting-edge AI and human oversight is what sold me. During the 2023 volatility,
+                        while my friends were panicking, my QuantEdge portfolio was automatically hedged and actually captured gains.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-photo">👨‍⚕️</div>
+                        <div class="author-info">
+                            <strong>Dr. David Patel</strong>
+                            <span>Physician, Boston</span>
+                        </div>
+                    </div>
+                    <div class="results-badge">+128% Return, -5% Max Drawdown</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Your Journey to Algorithmic Investment Success</h2>
+            <p class="section-subtitle">
+                A proven, transparent 3-step process designed to align our strategies with your unique goals
+            </p>
+
+            <div class="process-timeline">
+                <div class="timeline-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Free Strategy Session (30 Minutes)</h3>
+                        <p>
+                            In this no-obligation consultation, our senior quants will:
+                        </p>
+                        <ul>
+                            <li>Analyze your current portfolio structure and performance</li>
+                            <li>Identify specific optimization opportunities based on your risk profile</li>
+                            <li>Assess fit for our algorithmic strategies and realistic return expectations</li>
+                            <li>Answer all your questions about our methodology and technology</li>
+                        </ul>
+                        <p style="margin-top: 1rem; color: var(--text-secondary);">
+                            <strong>What you'll receive:</strong> Comprehensive portfolio analysis report ($2,000 value)
+                            showing exactly where traditional strategies are costing you money.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Custom Strategy Development (7-14 Days)</h3>
+                        <p>
+                            If we're a good fit, our team designs algorithms tailored to your specific objectives:
+                        </p>
+                        <ul>
+                            <li>Risk tolerance and timeline incorporated into every parameter</li>
+                            <li>Asset class allocation optimized using machine learning models</li>
+                            <li>Transparent fee structure presented with no hidden costs</li>
+                            <li>Detailed backtesting results across multiple market scenarios</li>
+                        </ul>
+                        <p style="margin-top: 1rem; color: var(--text-secondary);">
+                            <strong>You remain in control:</strong> We don't proceed until you're 100% comfortable
+                            with the strategy and understand exactly how it works.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Implementation & Ongoing Management</h3>
+                        <p>
+                            Once approved, we handle everything while keeping you fully informed:
+                        </p>
+                        <ul>
+                            <li>Seamless asset transition with zero disruption to your portfolio</li>
+                            <li>Real-time performance dashboard accessible 24/7 from any device</li>
+                            <li>Monthly detailed reports with performance attribution and insights</li>
+                            <li>Quarterly strategy reviews with senior team members</li>
+                            <li>Continuous algorithm optimization as market conditions evolve</li>
+                        </ul>
+                        <p style="margin-top: 1rem; color: var(--text-secondary);">
+                            <strong>Your dedicated team:</strong> Direct access to PhD-level quants and
+                            a relationship manager who knows your strategy inside-out.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="#booking-form" class="btn btn-primary" style="padding: 18px 48px; font-size: 1.1rem;">
+                    Start with Your Free Strategy Session
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offer Stack -->
+    <section class="services-overview">
+        <div class="container">
+            <h2 class="section-title">What You Get in Your Free Strategy Session</h2>
+            <p class="section-subtitle">
+                $5,000 worth of professional analysis and insights—yours free, with zero obligation
+            </p>
+
+            <div class="value-stack">
+                <div class="value-stack-content">
+                    <div class="value-item">
+                        <div class="value-check">✓</div>
+                        <div class="value-item-text">Comprehensive Portfolio Analysis & Health Report</div>
+                        <div class="value-price">$2,000</div>
+                    </div>
+
+                    <div class="value-item">
+                        <div class="value-check">✓</div>
+                        <div class="value-item-text">Custom Algorithmic Strategy Recommendations</div>
+                        <div class="value-price">$2,500</div>
+                    </div>
+
+                    <div class="value-item">
+                        <div class="value-check">✓</div>
+                        <div class="value-item-text">Risk Assessment & Optimization Roadmap</div>
+                        <div class="value-price">$500</div>
+                    </div>
+
+                    <div class="value-item">
+                        <div class="value-check">✓</div>
+                        <div class="value-item-text">Exclusive Access to Our Proprietary Market Outlook Dashboard</div>
+                        <div class="value-price">Priceless</div>
+                    </div>
+
+                    <div class="value-item">
+                        <div class="value-check">✓</div>
+                        <div class="value-item-text">30-Minute One-on-One Consultation with Senior Quant</div>
+                        <div class="value-price">Priceless</div>
+                    </div>
+
+                    <div class="value-total">
+                        <div class="value-total-label">Total Value:</div>
+                        <div class="value-total-amount">
+                            <span class="strikethrough">$5,000</span>
+                        </div>
+                        <div class="value-total-label">Your Investment Today:</div>
+                        <div class="value-final-price">$0</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scarcity-banner">
+                <div class="scarcity-content">
+                    <div class="urgency-badge">⚡ LIMITED AVAILABILITY</div>
+                    <h3>Why We Can't Accept Everyone</h3>
+                    <p>
+                        Our custom algorithmic approach requires significant quantitative resources per client.
+                        To maintain our performance standards and provide exceptional service, we limit new
+                        client acceptance to <strong>10 per quarter</strong>.
+                    </p>
+                    <div class="spots-remaining">Q1 2025: Only 3 Spots Remaining</div>
+                    <p style="font-size: 0.95rem; margin-top: 1rem;">
+                        Once these spots are filled, the next availability will be Q2 2025.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Common Questions From Private Investors</h2>
+            <p class="section-subtitle">
+                Everything you need to know before scheduling your strategy session
+            </p>
+
+            <div class="faq-section">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How is this different from robo-advisors like Betterment or Wealthfront?</h3>
+                        <div class="faq-toggle">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Robo-advisors use basic portfolio allocation templates applied to everyone. QuantEdge creates
+                            <strong>custom algorithms designed specifically for your goals</strong>, risk tolerance, and timeline.
+                            Our PhD quants build proprietary models that adapt in real-time to market conditions—not static ETF portfolios.
+                            Think of robo-advisors as economy class; we're private jet service. Plus, you have direct access
+                            to our senior team, not just automated software.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What's the minimum investment to get started?</h3>
+                        <div class="faq-toggle">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            We work with private investors starting at <strong>$500,000</strong> in investable assets.
+                            This ensures we can properly diversify strategies and cover the computational resources required
+                            for custom algorithm development. However, we evaluate each situation individually during the
+                            strategy session—if you're close to this threshold and serious about optimizing your portfolio,
+                            we're happy to discuss options.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do you protect against market crashes and extreme volatility?</h3>
+                        <div class="faq-toggle">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Risk management is at the core of everything we do. Our systems employ: <strong>multi-layered hedging strategies</strong>
+                            that automatically activate during volatility spikes; <strong>real-time position sizing</strong> that reduces exposure
+                            when risk metrics elevate; <strong>circuit breakers</strong> that halt trading if parameters are breached; and
+                            <strong>stress testing</strong> against 50+ historical crisis scenarios. During the 2020 COVID crash, while markets
+                            fell 35%, our algorithms limited client drawdowns to -8.2% on average while capturing the recovery upside.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I withdraw my funds anytime, or am I locked in?</h3>
+                        <div class="faq-toggle">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <strong>You maintain full liquidity</strong>—this is your money, not ours. You can request withdrawals
+                            at any time with 5 business days notice for processing (standard for institutional accounts). There are
+                            no lock-up periods or penalties. We're confident in our performance, so we don't need to trap clients.
+                            That said, we recommend a minimum 12-month investment horizon for optimal results, as short-term market
+                            noise can obscure the statistical edge our algorithms deliver over time.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What if the algorithms stop working? Markets change constantly.</h3>
+                        <div class="faq-toggle">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            This is actually why machine learning is superior to static strategies. Our algorithms <strong>continuously
+                            adapt and learn</strong> from new market data. We also employ ensemble methods—multiple algorithms working
+                            simultaneously, so if one model underperforms, others compensate. Plus, our research team constantly develops
+                            new factors and strategies. We have <strong>human oversight</strong> monitoring performance daily and quarterly
+                            strategy reviews to ensure alignment. This isn't "set and forget"—it's dynamic, intelligent management that
+                            evolves with markets.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do your fees compare to traditional wealth managers?</h3>
+                        <div class="faq-toggle">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Our fee structure is transparent: <strong>1% annual management fee + 20% performance fee</strong> on returns
+                            above a 6% hurdle rate (you earn 6% first before we take any performance fee). Traditional advisors charge
+                            1-2% annually regardless of performance, plus hidden fund fees averaging another 0.5-1.5%. Our structure
+                            aligns incentives—we only earn significant fees when you're earning significant returns. If we deliver our
+                            historical 156% annualized returns, you're netting 124%+ after all fees, compared to 8-10% with traditional
+                            advisors. The math speaks for itself.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Is my money safe? Who holds the assets?</h3>
+                        <div class="faq-toggle">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Your assets are held at <strong>top-tier institutional custodians</strong> (like Interactive Brokers, Fidelity,
+                            or your preferred qualified custodian), NOT with QuantEdge directly. We have <strong>trading authorization only</strong>—
+                            we can execute strategies but cannot withdraw funds. You receive statements directly from your custodian.
+                            QuantEdge is a <strong>SEC-registered investment advisor</strong> subject to regulatory audits and compliance
+                            requirements. Your money is also SIPC protected up to $500,000. This structure ensures your assets are completely
+                            segregated and secure.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What happens in the free consultation if I decide not to proceed?</h3>
+                        <div class="faq-toggle">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <strong>Absolutely nothing.</strong> You keep all the analysis and reports we provide—they're yours to use
+                            however you wish. We don't do high-pressure sales. Our philosophy is that if we're a good fit and our analysis
+                            is compelling, you'll want to work with us. If not, we'll part as friends and you'll still have valuable insights
+                            into your portfolio. We're selective about clients because custom algorithm development is resource-intensive—we'd
+                            rather work with investors who are genuinely excited about the approach than convince someone on the fence.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Risk Reversal / Guarantee -->
+    <section class="services-overview">
+        <div class="container">
+            <div class="guarantee-section">
+                <div class="guarantee-badge">🛡️</div>
+                <h2>Our 100% No-Risk Guarantee</h2>
+                <p>
+                    Schedule your strategy session with <strong>zero obligation and zero risk</strong>.
+                    If you don't discover at least 3 actionable opportunities to significantly improve your portfolio's
+                    risk-adjusted returns, we'll send you a <strong>$100 Amazon gift card</strong> as thanks for your time.
+                </p>
+
+                <div class="guarantee-points">
+                    <div class="guarantee-point">
+                        <div class="guarantee-point-icon">✓</div>
+                        <div class="guarantee-point-text">No credit card required</div>
+                    </div>
+                    <div class="guarantee-point">
+                        <div class="guarantee-point-icon">✓</div>
+                        <div class="guarantee-point-text">No pressure sales tactics</div>
+                    </div>
+                    <div class="guarantee-point">
+                        <div class="guarantee-point-icon">✓</div>
+                        <div class="guarantee-point-text">Keep all reports & analyses</div>
+                    </div>
+                    <div class="guarantee-point">
+                        <div class="guarantee-point-icon">✓</div>
+                        <div class="guarantee-point-text">Cancel anytime, for any reason</div>
+                    </div>
+                </div>
+
+                <p style="margin-top: 2rem; font-size: 1rem;">
+                    We're so confident in the value we deliver that we're willing to pay you for the opportunity to prove it.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section with Booking Form -->
+    <section class="final-cta-section" id="booking-form">
+        <div class="container">
+            <div class="final-cta-content">
+                <h2>Ready to Experience the QuantEdge Advantage?</h2>
+                <p>
+                    Join the private investors who've discovered the power of algorithmic precision.
+                    Schedule your free strategy session now—it takes 60 seconds.
+                </p>
+
+                <div class="booking-form">
+                    <form id="strategy-session-form">
+                        <div class="form-group">
+                            <label for="first-name">First Name *</label>
+                            <input type="text" id="first-name" name="first-name" required placeholder="John">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="last-name">Last Name *</label>
+                            <input type="text" id="last-name" name="last-name" required placeholder="Smith">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="john.smith@email.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number (Optional but Recommended)</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="portfolio-size">Approximate Portfolio Size *</label>
+                            <select id="portfolio-size" name="portfolio-size" required>
+                                <option value="">Select range...</option>
+                                <option value="500k-1m">$500K - $1M</option>
+                                <option value="1m-3m">$1M - $3M</option>
+                                <option value="3m-5m">$3M - $5M</option>
+                                <option value="5m-10m">$5M - $10M</option>
+                                <option value="10m+">$10M+</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="form-submit">
+                            Schedule My Free Strategy Session →
+                        </button>
+
+                        <div class="form-privacy">
+                            By submitting, you agree to our <a href="#">Privacy Policy</a>.
+                            We respect your privacy and will never share your information.
+                        </div>
+                    </form>
+                </div>
+
+                <div class="cta-subtext" style="margin-top: 2rem; justify-content: center;">
+                    <div class="cta-subtext-item">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18Z" stroke="#34a853" stroke-width="2"/>
+                            <path d="M6 10L9 13L14 7" stroke="#34a853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        ⚡ Book instantly, pick your preferred time
+                    </div>
+                    <div class="cta-subtext-item">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18Z" stroke="#34a853" stroke-width="2"/>
+                            <path d="M6 10L9 13L14 7" stroke="#34a853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        📊 Receive portfolio questionnaire
+                    </div>
+                    <div class="cta-subtext-item">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18Z" stroke="#34a853" stroke-width="2"/>
+                            <path d="M6 10L9 13L14 7" stroke="#34a853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        🔒 100% confidential, zero obligation
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 QuantEdge Solutions. All rights reserved. | SEC Registered Investment Advisor</p>
+            <p style="font-size: 0.85rem; margin-top: 1rem; color: var(--text-muted);">
+                Past performance is not indicative of future results. All investments involve risk, including possible loss of principal.
+                QuantEdge is a registered investment advisor. Consult with a financial professional before making investment decisions.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Social Proof Popup -->
+    <div class="social-proof-popup" id="social-proof-popup">
+        <div class="social-proof-content">
+            <div class="social-proof-icon">👤</div>
+            <div class="social-proof-text">
+                <p><strong>Michael from New York</strong> just scheduled a strategy session</p>
+                <div class="time">3 minutes ago</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sticky Sidebar -->
+    <div class="sticky-sidebar">
+        <a href="https://wa.link/p7vans" target="_blank" class="sidebar-btn whatsapp-btn" aria-label="Contact us on WhatsApp">
+            <svg class="sidebar-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.029 18.88c-1.161 0-2.305-.292-3.318-.844l-3.677.964.98-3.686c-.592-1.029-.9-2.201-.899-3.427.002-3.398 2.762-6.156 6.162-6.156 3.405 0 6.162 2.76 6.162 6.163 0 3.401-2.762 6.162-6.164 6.162z"/>
+            </svg>
+            <div class="sidebar-tooltip">WhatsApp</div>
+        </a>
+        <a href="quick-contact.html" class="sidebar-btn contact-btn" aria-label="Leave Details">
+            <svg class="sidebar-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 8L10.89 13.26C11.2187 13.4793 11.6049 13.5963 12 13.5963C12.3951 13.5963 12.7813 13.4793 13.11 13.26L21 8M5 19H19C19.5304 19 20.0391 18.7893 20.4142 18.4142C20.7893 18.0391 21 17.5304 21 17V7C21 6.46957 20.7893 5.96086 20.4142 5.58579C20.0391 5.21071 19.5304 5 19 5H5C4.46957 5 3.96086 5.21071 3.58579 5.58579C3.21071 5.96086 3 6.46957 3 7V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19Z" stroke="currentColor" stroke-width="2" fill="none"/>
+            </svg>
+            <div class="sidebar-tooltip">Leave Details</div>
+        </a>
+    </div>
+
+    <script src="navigation.js"></script>
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                const isActive = faqItem.classList.contains('active');
+
+                // Close all FAQs
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+
+                // Open clicked FAQ if it wasn't active
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
+
+        // Social Proof Popup
+        const socialProofMessages = [
+            { name: 'Michael from New York', action: 'scheduled a strategy session' },
+            { name: 'Sarah from California', action: 'downloaded the portfolio analysis' },
+            { name: 'David from Texas', action: 'joined QuantEdge' },
+            { name: 'Jennifer from Florida', action: 'scheduled a strategy session' },
+            { name: 'Robert from Illinois', action: 'requested information' }
+        ];
+
+        let currentMessageIndex = 0;
+
+        function showSocialProof() {
+            const popup = document.getElementById('social-proof-popup');
+            const message = socialProofMessages[currentMessageIndex];
+
+            popup.querySelector('p strong').textContent = message.name;
+            popup.querySelector('p').innerHTML = `<strong>${message.name}</strong> just ${message.action}`;
+
+            popup.classList.add('show');
+
+            setTimeout(() => {
+                popup.classList.remove('show');
+            }, 6000);
+
+            currentMessageIndex = (currentMessageIndex + 1) % socialProofMessages.length;
+        }
+
+        // Show first popup after 5 seconds
+        setTimeout(showSocialProof, 5000);
+
+        // Show subsequent popups every 15 seconds
+        setInterval(showSocialProof, 15000);
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission
+        document.getElementById('strategy-session-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Get form data
+            const formData = {
+                firstName: document.getElementById('first-name').value,
+                lastName: document.getElementById('last-name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                portfolioSize: document.getElementById('portfolio-size').value
+            };
+
+            // Here you would normally send this to your backend
+            console.log('Form submitted:', formData);
+
+            // Show success message
+            alert('Thank you! Your strategy session has been requested. Our team will contact you within 24 hours to schedule your personalized consultation.');
+
+            // Reset form
+            this.reset();
+        });
+
+        // Animate stats on scroll
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: '0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.dataset.animated) {
+                    entry.target.style.opacity = '0';
+                    entry.target.style.transform = 'translateY(30px)';
+                    entry.target.style.transition = 'all 0.6s ease';
+
+                    setTimeout(() => {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }, 100);
+
+                    entry.target.dataset.animated = 'true';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all major sections
+        document.querySelectorAll('.section-title, .lead-headline, .pillar-card, .team-card, .testimonial-card').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantitative Trading Insights - Blog | QuantEdge</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <meta name="description" content="Expert insights on quantitative trading, algorithmic strategies, market analysis, and financial technology from QuantEdge's research team.">
+    <style>
+        /* Blog page inline styles */
+
+        .blog-image::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            animation: float 10s ease-in-out infinite;
+        }
+
+        .blog-category {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 82, 255, 0.9);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--white);
+            z-index: 2;
+        }
+
+        .blog-icon {
+            font-size: 4rem;
+            color: rgba(255, 255, 255, 0.9);
+            z-index: 1;
+            position: relative;
+        }
+
+        .blog-content {
+            padding: 2rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+
+        .blog-date {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .blog-author {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .blog-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .blog-excerpt {
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .blog-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition-smooth);
+        }
+
+        .blog-link:hover {
+            gap: 1rem;
+            color: var(--white);
+        }
+
+        .blog-link svg {
+            width: 20px;
+            height: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .blog-link:hover svg {
+            transform: translateX(5px);
+        }
+
+        /* Featured Post */
+        .featured-post {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border-radius: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            overflow: hidden;
+            margin-bottom: 4rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            transition: var(--transition-smooth);
+        }
+
+        .featured-post:hover {
+            border-color: rgba(0, 82, 255, 0.3);
+            box-shadow: 0 30px 60px rgba(0, 82, 255, 0.3);
+        }
+
+        .featured-image {
+            background: var(--gradient-primary);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 400px;
+        }
+
+        .featured-image::before {
+            content: '';
+            position: absolute;
+            width: 150%;
+            height: 150%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .featured-icon {
+            font-size: 6rem;
+            color: rgba(255, 255, 255, 0.9);
+            z-index: 1;
+            position: relative;
+        }
+
+        .featured-content {
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .featured-badge {
+            display: inline-block;
+            background: rgba(255, 0, 128, 0.2);
+            color: var(--accent-color);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            align-self: flex-start;
+        }
+
+        .featured-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .featured-excerpt {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        /* Categories Filter */
+        .blog-filter {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 10px 24px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            color: var(--text-muted);
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+
+        .filter-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--secondary-color);
+            color: var(--white);
+        }
+
+        .filter-btn.active {
+            background: var(--gradient-primary);
+            border-color: transparent;
+            color: var(--white);
+        }
+
+        /* Newsletter Section */
+        .newsletter-section {
+            background: var(--gradient-primary);
+            padding: 4rem 0;
+            margin-top: 6rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .newsletter-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+            animation: float 15s ease-in-out infinite;
+        }
+
+        .newsletter-content {
+            position: relative;
+            z-index: 1;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .newsletter-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .newsletter-subtitle {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 1rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .newsletter-input {
+            flex: 1;
+            padding: 16px 24px;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 12px;
+            color: var(--white);
+            font-size: 1rem;
+            transition: var(--transition-smooth);
+        }
+
+        .newsletter-input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .newsletter-input:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.25);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .newsletter-btn {
+            padding: 16px 32px;
+            background: var(--white);
+            color: var(--primary-color);
+            border: none;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+
+        .newsletter-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .featured-post {
+                grid-template-columns: 1fr;
+            }
+
+            .featured-title {
+                font-size: 1.8rem;
+            }
+
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loading-screen">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <svg class="nav-logo" width="32" height="32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="brandGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#1a73e8;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#34a853;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <rect x="10" y="20" width="15" height="60" fill="url(#brandGradient)" opacity="0.8"/>
+                    <rect x="30" y="10" width="15" height="80" fill="url(#brandGradient)" opacity="0.9"/>
+                    <rect x="50" y="25" width="15" height="50" fill="url(#brandGradient)" opacity="0.7"/>
+                    <rect x="70" y="15" width="15" height="70" fill="url(#brandGradient)" opacity="0.85"/>
+                    <path d="M10 50 Q50 30 90 50" stroke="url(#brandGradient)" stroke-width="3" fill="none" opacity="0.6"/>
+                </svg>
+                <span>QuantEdge</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="services.html">Services</a>
+                    <div class="nav-dropdown">
+                        <a href="service-algorithmic-trading.html">Algorithmic Trading Development</a>
+                        <a href="service-quantitative-research.html">Quantitative Research & Analysis</a>
+                        <a href="service-risk-management.html">Risk Management & Infrastructure</a>
+                        <a href="service-portfolio-optimization.html">Portfolio Optimization</a>
+                        <a href="service-execution-services.html">Execution Services</a>
+                        <a href="service-bespoke-solutions.html">Bespoke Solutions</a>
+                        <a href="service-machine-learning.html">Machine Learning Alpha Research</a>
+                        <a href="service-api-integration.html">API Integration</a>
+                        <a href="service-cloud-deployment.html">Cloud & VPS Deployment</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="strategies.html">Strategies</a>
+                    <div class="nav-dropdown">
+                        <a href="strategy-gap-and-go-optimized.html">Gap and Go Strategy</a>
+                        <a href="strategy-gap-and-close-optimized.html">Gap and Close Strategy</a>
+                        <a href="strategy-monthly-dip-optimized.html">Monthly Dip Strategy</a>
+                        <a href="strategy-framework.html">Strategy Development Framework</a>
+                        <a href="strategy-bespoke.html">Bespoke Strategy Development</a>
+                    </div>
+                </li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Quantitative Insights</h1>
+            <p class="section-subtitle">Expert analysis on algorithmic trading, market dynamics, and financial technology</p>
+        </div>
+    </section>
+
+    <!-- Blog Content -->
+    <section class="services-detail">
+        <div class="container">
+            <!-- Main Hub Link -->
+            <div style="background: var(--gradient-primary); padding: 2rem; border-radius: 16px; margin-bottom: 3rem; text-align: center;">
+                <h2 style="color: var(--white); margin-bottom: 1rem;">📚 Explore Our Complete Quantitative Trading Guide</h2>
+                <p style="color: rgba(255,255,255,0.9); margin-bottom: 1.5rem;">Dive deep into strategies, risk analytics, market analysis, and more in our comprehensive resource hub.</p>
+                <a href="quantitative-trading/" class="btn btn-secondary" style="background: rgba(255,255,255,0.2); border: 2px solid var(--white); padding: 12px 32px;">
+                    Visit Quantitative Trading Hub →
+                </a>
+            </div>
+            
+            <!-- Featured Post -->
+            <div class="featured-post">
+                <div class="featured-image">
+                    <span class="featured-icon">🧠</span>
+                </div>
+                <div class="featured-content">
+                    <span class="featured-badge">Featured Article</span>
+                    <h2 class="featured-title">Machine Learning in High-Frequency Trading: The Next Frontier</h2>
+                    <p class="featured-excerpt">
+                        Explore how cutting-edge machine learning algorithms are revolutionizing high-frequency trading strategies, 
+                        from deep reinforcement learning for optimal execution to transformer models for market prediction.
+                    </p>
+                    <a href="quantitative-trading/quantitative-methods/machine-learning/" class="blog-link">
+                        Read Full Article 
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Category Filter -->
+            <div class="blog-filter">
+                <button class="filter-btn active">All Posts</button>
+                <button class="filter-btn">Market Analysis</button>
+                <button class="filter-btn">Strategy Insights</button>
+                <button class="filter-btn">Technology</button>
+                <button class="filter-btn">Research Papers</button>
+                <button class="filter-btn">Tutorials</button>
+            </div>
+
+            <!-- Blog Grid -->
+            <div class="blog-grid">
+                <!-- Blog Post 1 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <span class="blog-category">Market Analysis</span>
+                        <span class="blog-icon">📊</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">January 15, 2025</span>
+                            <span class="blog-author">• Dr. Sarah Chen</span>
+                        </div>
+                        <h3 class="blog-title">Volatility Clustering in Crypto Markets: A Statistical Deep Dive</h3>
+                        <p class="blog-excerpt">
+                            Analyzing the GARCH family models and their effectiveness in capturing volatility dynamics 
+                            in cryptocurrency markets compared to traditional assets.
+                        </p>
+                        <a href="quantitative-trading/market-analysis/volatility-modeling/" class="blog-link">
+                            Read More 
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 2 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <span class="blog-category">Strategy Insights</span>
+                        <span class="blog-icon">🎯</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">January 12, 2025</span>
+                            <span class="blog-author">• Michael Zhang</span>
+                        </div>
+                        <h3 class="blog-title">Optimizing Pairs Trading with Kalman Filters</h3>
+                        <p class="blog-excerpt">
+                            Implementation guide for dynamic hedge ratio estimation using Kalman filters to enhance 
+                            statistical arbitrage strategies in equity markets.
+                        </p>
+                        <a href="quantitative-trading/strategies/statistical-arbitrage/" class="blog-link">
+                            Read More 
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 3 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <span class="blog-category">Technology</span>
+                        <span class="blog-icon">⚡</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">January 10, 2025</span>
+                            <span class="blog-author">• Alex Kumar</span>
+                        </div>
+                        <h3 class="blog-title">Building Ultra-Low Latency Trading Systems with Rust</h3>
+                        <p class="blog-excerpt">
+                            A comprehensive guide to leveraging Rust's zero-cost abstractions and memory safety 
+                            for developing sub-microsecond trading infrastructure.
+                        </p>
+                        <a href="quantitative-trading/trading-technology/execution-systems/" class="blog-link">
+                            Read More 
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 4 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <span class="blog-category">Research Papers</span>
+                        <span class="blog-icon">📚</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">January 8, 2025</span>
+                            <span class="blog-author">• Prof. James Wilson</span>
+                        </div>
+                        <h3 class="blog-title">Market Microstructure and Order Flow Toxicity</h3>
+                        <p class="blog-excerpt">
+                            New research on measuring and predicting adverse selection in electronic markets using 
+                            advanced order flow analytics and machine learning.
+                        </p>
+                        <a href="quantitative-trading/market-analysis/order-flow-analysis/" class="blog-link">
+                            Read More 
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 5 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <span class="blog-category">Tutorials</span>
+                        <span class="blog-icon">🛠️</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">January 5, 2025</span>
+                            <span class="blog-author">• Emma Rodriguez</span>
+                        </div>
+                        <h3 class="blog-title">Implementing Factor Models in Python: A Step-by-Step Guide</h3>
+                        <p class="blog-excerpt">
+                            Complete tutorial on building and backtesting multi-factor models using Python, 
+                            including data preprocessing, factor construction, and portfolio optimization.
+                        </p>
+                        <a href="quantitative-trading/quantitative-methods/" class="blog-link">
+                            Read More 
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 6 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <span class="blog-category">Market Analysis</span>
+                        <span class="blog-icon">💹</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">January 3, 2025</span>
+                            <span class="blog-author">• Dr. Robert Lee</span>
+                        </div>
+                        <h3 class="blog-title">Regime Detection in Financial Markets Using Hidden Markov Models</h3>
+                        <p class="blog-excerpt">
+                            Practical applications of HMMs for identifying market regimes and adapting trading 
+                            strategies to changing market conditions in real-time.
+                        </p>
+                        <a href="quantitative-trading/market-analysis/" class="blog-link">
+                            Read More 
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2 class="newsletter-title">Stay Ahead of the Markets</h2>
+                <p class="newsletter-subtitle">
+                    Get exclusive insights, research papers, and trading strategies delivered to your inbox weekly
+                </p>
+                <form class="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="Enter your email address" required>
+                    <button type="submit" class="newsletter-btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 QuantEdge Solutions. All rights reserved. | Transforming Markets Through Technology</p>
+        </div>
+    </footer>
+
+    <script>
+        // Loading screen
+        window.addEventListener('load', function() {
+            const loadingScreen = document.getElementById('loading-screen');
+            setTimeout(() => {
+                loadingScreen.classList.add('fade-out');
+                setTimeout(() => {
+                    loadingScreen.style.display = 'none';
+                }, 500);
+            }, 1000);
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        menuToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+        });
+
+        // Category filter functionality
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                // Add filtering logic here
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.blog-card, .featured-post').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+
+    <!-- Sticky Sidebar -->
+    <div class="sticky-sidebar">
+        <a href="https://wa.link/p7vans" target="_blank" class="sidebar-btn whatsapp-btn" aria-label="Contact us on WhatsApp">
+            <svg class="sidebar-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.029 18.88c-1.161 0-2.305-.292-3.318-.844l-3.677.964.98-3.686c-.592-1.029-.9-2.201-.899-3.427.002-3.398 2.762-6.156 6.162-6.156 3.405 0 6.162 2.76 6.162 6.163 0 3.401-2.762 6.162-6.164 6.162z"/>
+            </svg>
+            <div class="sidebar-tooltip">WhatsApp</div>
+        </a>
+        <a href="quick-contact.html" class="sidebar-btn contact-btn" aria-label="Leave Details">
+            <svg class="sidebar-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 8L10.89 13.26C11.2187 13.4793 11.6049 13.5963 12 13.5963C12.3951 13.5963 12.7813 13.4793 13.11 13.26L21 8M5 19H19C19.5304 19 20.0391 18.7893 20.4142 18.4142C20.7893 18.0391 21 17.5304 21 17V7C21 6.46957 20.7893 5.96086 20.4142 5.58579C20.0391 5.21071 19.5304 5 19 5H5C4.46957 5 3.96086 5.21071 3.58579 5.58579C3.21071 5.96086 3 6.46957 3 7V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19Z" stroke="currentColor" stroke-width="2" fill="none"/>
+            </svg>
+            <div class="sidebar-tooltip">Leave Details</div>
+        </a>
+    </div>
+</body>
+</html>

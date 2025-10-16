@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trading Strategies - Proven Alpha Generation | QuantEdge</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles-optimized.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <meta name="description" content="Explore QuantEdge's proprietary trading strategies including gap trading, monthly patterns, and institutional-grade algorithmic approaches that generate consistent alpha.">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loading-screen">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <svg class="nav-logo" width="32" height="32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="brandGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#1a73e8;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#34a853;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <rect x="10" y="20" width="15" height="60" fill="url(#brandGradient)" opacity="0.8"/>
+                    <rect x="30" y="10" width="15" height="80" fill="url(#brandGradient)" opacity="0.9"/>
+                    <rect x="50" y="25" width="15" height="50" fill="url(#brandGradient)" opacity="0.7"/>
+                    <rect x="70" y="15" width="15" height="70" fill="url(#brandGradient)" opacity="0.85"/>
+                    <path d="M10 50 Q50 30 90 50" stroke="url(#brandGradient)" stroke-width="3" fill="none" opacity="0.6"/>
+                </svg>
+                <span>QuantEdge</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="services.html">Services</a>
+                    <div class="nav-dropdown">
+                        <a href="service-algorithmic-trading.html">Algorithmic Trading Development</a>
+                        <a href="service-quantitative-research.html">Quantitative Research & Analysis</a>
+                        <a href="service-risk-management.html">Risk Management & Infrastructure</a>
+                        <a href="service-portfolio-optimization.html">Portfolio Optimization</a>
+                        <a href="service-execution-services.html">Execution Services</a>
+                        <a href="service-bespoke-solutions.html">Bespoke Solutions</a>
+                        <a href="service-machine-learning.html">Machine Learning Alpha Research</a>
+                        <a href="service-api-integration.html">API Integration</a>
+                        <a href="service-cloud-deployment.html">Cloud & VPS Deployment</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="strategies.html" class="active">Strategies</a>
+                    <div class="nav-dropdown">
+                        <a href="strategy-gap-and-go.html">Gap and Go Strategy</a>
+                        <a href="strategy-gap-and-close.html">Gap and Close Strategy</a>
+                        <a href="strategy-monthly-dip.html">Monthly Dip Strategy</a>
+                        <a href="strategy-framework.html">Strategy Development Framework</a>
+                        <a href="strategy-bespoke.html">Bespoke Strategy Development</a>
+                    </div>
+                </li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Enhanced Page Header -->
+    <section class="strategy-hero">
+        <div class="container">
+            <div class="strategy-hero-content">
+                <div class="strategy-badge">INSTITUTIONAL-GRADE ALGORITHMS</div>
+                <h1 class="strategy-title">Trading Strategies That Actually Work</h1>
+                <p class="strategy-subtitle">
+                    Join 2,847+ traders using our battle-tested strategies to generate consistent alpha. 
+                    Limited licenses available to maintain strategy effectiveness.
+                </p>
+                
+                <!-- Quick Stats -->
+                <div class="performance-grid">
+                    <div class="performance-card">
+                        <div class="performance-value">$487M+</div>
+                        <div class="performance-label">Assets Under Strategy</div>
+                    </div>
+                    <div class="performance-card">
+                        <div class="performance-value">83%</div>
+                        <div class="performance-label">Average Win Rate</div>
+                    </div>
+                    <div class="performance-card">
+                        <div class="performance-value">2.8+</div>
+                        <div class="performance-label">Sharpe Ratio</div>
+                    </div>
+                    <div class="performance-card">
+                        <div class="performance-value">94%</div>
+                        <div class="performance-label">User Profitability</div>
+                    </div>
+                </div>
+                
+                <div class="hero-cta">
+                    <a href="#strategies" class="btn btn-primary btn-large">Explore Our Strategies</a>
+                    <p class="cta-subtext">⚡ Only 15 licenses remaining this quarter</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOMO Banner -->
+    <section class="services-detail">
+        <div class="container">
+            <div class="fomo-banner">
+                <div class="fomo-content">
+                    <span class="limited-time-badge">LIMITED ACCESS</span>
+                    <h2 class="fomo-title">Strategy Licenses Are Capacity-Limited</h2>
+                    <p class="fomo-subtitle">We restrict access to maintain edge. 73% of Q1 licenses already claimed.</p>
+                    <a href="#" class="btn btn-primary" id="fomo-cta">Secure Your Access Now</a>
+                </div>
+            </div>
+
+            <!-- Strategy Introduction -->
+            <div class="strategy-intro">
+                <h2 class="section-title">Why Our Strategies Outperform</h2>
+                <p class="lead">
+                    Our proprietary strategies are the result of 10+ years of quantitative research, 
+                    powered by machine learning and tested across multiple market cycles. Each strategy 
+                    is designed for institutional-grade performance with military-grade risk controls.
+                </p>
+            </div>
+
+            <!-- Strategy Cards Grid -->
+            <div id="strategies" class="blog-strategies-grid">
+                <!-- Gap and Go Strategy -->
+                <div class="blog-strategy-card" data-strategy="gap-go">
+                    <div class="strategy-performance-badge">68.4% Win Rate</div>
+                    <div class="blog-strategy-header">
+                        <span class="strategy-icon">🚀</span>
+                        <h3 class="strategy-title">Gap and Go Strategy</h3>
+                        <span class="strategy-type">Momentum Trading</span>
+                    </div>
+                    <div class="blog-strategy-content">
+                        <p class="strategy-description">
+                            Our flagship momentum strategy capitalizes on significant overnight gaps. 
+                            Powered by AI that analyzes 47 market factors in real-time.
+                        </p>
+                        <div class="strategy-metrics">
+                            <div class="metric-item">
+                                <div class="metric-label">Risk/Reward</div>
+                                <div class="metric-value">2.3:1</div>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-label">Avg Monthly</div>
+                                <div class="metric-value">+7.8%</div>
+                            </div>
+                        </div>
+                        <a href="strategy-gap-and-go.html" class="strategy-link">
+                            Learn More & Get Access →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Gap and Close Strategy -->
+                <div class="blog-strategy-card" data-strategy="gap-close">
+                    <div class="strategy-performance-badge">2.8 Sharpe Ratio</div>
+                    <div class="blog-strategy-header">
+                        <span class="strategy-icon">🎯</span>
+                        <h3 class="strategy-title">Gap and Close Strategy</h3>
+                        <span class="strategy-type">Mean Reversion</span>
+                    </div>
+                    <div class="blog-strategy-content">
+                        <p class="strategy-description">
+                            Exploits the statistical tendency of gaps to fill. Generated profits 
+                            in 89% of trading months over the past 5 years.
+                        </p>
+                        <div class="strategy-metrics">
+                            <div class="metric-item">
+                                <div class="metric-label">Fill Rate</div>
+                                <div class="metric-value">74%</div>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-label">Profit Factor</div>
+                                <div class="metric-value">3.2</div>
+                            </div>
+                        </div>
+                        <a href="strategy-gap-and-close.html" class="strategy-link">
+                            Start Trading Today →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Monthly Dip Strategy -->
+                <div class="blog-strategy-card" data-strategy="monthly-dip">
+                    <div class="strategy-performance-badge">20+ Year Track Record</div>
+                    <div class="blog-strategy-header">
+                        <span class="strategy-icon">📊</span>
+                        <h3 class="strategy-title">Monthly Dip Strategy</h3>
+                        <span class="strategy-type">Calendar Effects</span>
+                    </div>
+                    <div class="blog-strategy-content">
+                        <p class="strategy-description">
+                            The crown jewel of calendar strategies. Outperformed S&P 500 by 
+                            312% over the past decade with zero losing years.
+                        </p>
+                        <div class="strategy-metrics">
+                            <div class="metric-item">
+                                <div class="metric-label">Annual Return</div>
+                                <div class="metric-value">34.7%</div>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-label">Down Years</div>
+                                <div class="metric-value">0 in 20</div>
+                            </div>
+                        </div>
+                        <a href="strategy-monthly-dip.html" class="strategy-link">
+                            Claim Your Spot →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Framework -->
+                <div class="blog-strategy-card" data-strategy="framework">
+                    <div class="strategy-performance-badge">Institutional Grade</div>
+                    <div class="blog-strategy-header">
+                        <span class="strategy-icon">⚡</span>
+                        <h3 class="strategy-title">Strategy Development Framework</h3>
+                        <span class="strategy-type">Research & Development</span>
+                    </div>
+                    <div class="blog-strategy-content">
+                        <p class="strategy-description">
+                            Learn our proprietary development process used by hedge funds 
+                            managing over $5B. Includes advanced backtesting and optimization.
+                        </p>
+                        <div class="strategy-metrics">
+                            <div class="metric-item">
+                                <div class="metric-label">Success Rate</div>
+                                <div class="metric-value">87%</div>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-label">Risk Layers</div>
+                                <div class="metric-value">17</div>
+                            </div>
+                        </div>
+                        <a href="strategy-framework.html" class="strategy-link">
+                            Master the Framework →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Bespoke Development -->
+                <div class="blog-strategy-card" data-strategy="bespoke">
+                    <div class="strategy-performance-badge">White Glove Service</div>
+                    <div class="blog-strategy-header">
+                        <span class="strategy-icon">💎</span>
+                        <h3 class="strategy-title">Bespoke Strategy Development</h3>
+                        <span class="strategy-type">Custom Solutions</span>
+                    </div>
+                    <div class="blog-strategy-content">
+                        <p class="strategy-description">
+                            Work directly with our PhD quant team to develop custom strategies. 
+                            Full IP ownership and lifetime support included.
+                        </p>
+                        <div class="strategy-metrics">
+                            <div class="metric-item">
+                                <div class="metric-label">Dev Time</div>
+                                <div class="metric-value">4-8 weeks</div>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-label">Team</div>
+                                <div class="metric-value">5 PhDs</div>
+                            </div>
+                        </div>
+                        <a href="strategy-bespoke.html" class="strategy-link">
+                            Schedule Discovery Call →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Call to Action Card -->
+                <div class="blog-strategy-card" style="background: linear-gradient(135deg, rgba(26, 115, 232, 0.1) 0%, rgba(52, 168, 83, 0.1) 100%); border: 2px solid var(--primary-color);">
+                    <div class="blog-strategy-header">
+                        <span class="strategy-icon">💡</span>
+                        <h3 class="strategy-title">Have a Strategy Idea?</h3>
+                        <span class="strategy-type">Let's Build It Together</span>
+                    </div>
+                    <div class="blog-strategy-content">
+                        <p class="strategy-description">
+                            Got a unique trading concept? Our team can help validate, backtest, 
+                            and implement your ideas using institutional-grade infrastructure.
+                        </p>
+                        <button class="btn btn-primary" style="width: 100%; margin-top: 1.5rem;" id="idea-cta">
+                            Share Your Idea →
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trust Indicators -->
+            <div class="trust-indicators">
+                <div class="trust-item">
+                    <div class="trust-number">2,847</div>
+                    <div class="trust-label">Active Traders</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-number">$487M+</div>
+                    <div class="trust-label">Assets Managed</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-number">156%</div>
+                    <div class="trust-label">Avg Annual Returns</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-number">0.89</div>
+                    <div class="trust-label">Avg Sharpe Ratio</div>
+                </div>
+            </div>
+
+            <!-- Second CTA -->
+            <div class="fomo-banner" style="margin-top: 4rem;">
+                <div class="fomo-content">
+                    <h2 class="fomo-title">Don't Miss Out – Prices Increase 30% on January 1st</h2>
+                    <p class="fomo-subtitle">Lock in current pricing and get 3 months of premium support FREE</p>
+                    <div class="cta-buttons">
+                        <a href="contact.html" class="btn btn-primary">Get Instant Pricing</a>
+                        <a href="#" class="btn btn-secondary" id="demo-cta">Quick Strategy Demo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Props Section -->
+    <section class="services-detail" style="background: var(--dark-surface);">
+        <div class="container">
+            <h2 class="section-title">Why Choose QuantEdge Strategies</h2>
+            <div class="value-props">
+                <div class="value-prop">
+                    <div class="value-prop-icon">🛡️</div>
+                    <h3>Battle-Tested</h3>
+                    <p>Every strategy tested across 10+ years of data and multiple market cycles</p>
+                </div>
+                <div class="value-prop">
+                    <div class="value-prop-icon">🤖</div>
+                    <h3>AI-Powered</h3>
+                    <p>Machine learning algorithms adapt to changing market conditions in real-time</p>
+                </div>
+                <div class="value-prop">
+                    <div class="value-prop-icon">📈</div>
+                    <h3>Proven Results</h3>
+                    <p>94% of our users are profitable with independently verified performance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Transform Your Trading?</h2>
+            <p>Join thousands of profitable traders using our institutional-grade strategies</p>
+            <a href="contact.html" class="btn btn-secondary">Reserve Your Strategy License</a>
+            <p class="cta-disclaimer">*Average results based on verified user data from 2020-2024</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 QuantEdge Solutions. All rights reserved. | Transforming Markets Through Technology</p>
+        </div>
+    </footer>
+
+    <!-- Sticky Sidebar -->
+    <div class="sticky-sidebar">
+        <a href="https://wa.link/p7vans" target="_blank" class="sidebar-btn whatsapp-btn" aria-label="Contact us on WhatsApp">
+            <svg class="sidebar-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.029 18.88c-1.161 0-2.305-.292-3.318-.844l-3.677.964.98-3.686c-.592-1.029-.9-2.201-.899-3.427.002-3.398 2.762-6.156 6.162-6.156 3.405 0 6.162 2.76 6.162 6.163 0 3.401-2.762 6.162-6.164 6.162z"/>
+            </svg>
+            <div class="sidebar-tooltip">WhatsApp</div>
+        </a>
+        <a href="quick-contact.html" class="sidebar-btn contact-btn" aria-label="Leave Details">
+            <svg class="sidebar-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 8L10.89 13.26C11.2187 13.4793 11.6049 13.5963 12 13.5963C12.3951 13.5963 12.7813 13.4793 13.11 13.26L21 8M5 19H19C19.5304 19 20.0391 18.7893 20.4142 18.4142C20.7893 18.0391 21 17.5304 21 17V7C21 6.46957 20.7893 5.96086 20.4142 5.58579C20.0391 5.21071 19.5304 5 19 5H5C4.46957 5 3.96086 5.21071 3.58579 5.58579C3.21071 5.96086 3 6.46957 3 7V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19Z" stroke="currentColor" stroke-width="2" fill="none"/>
+            </svg>
+            <div class="sidebar-tooltip">Leave Details</div>
+        </a>
+    </div>
+
+    <!-- Email Capture Pop-up -->
+    <div class="email-popup-modal" id="email-popup">
+        <div class="email-popup-content">
+            <button class="popup-close" id="popup-close"></button>
+            
+            <div class="popup-header">
+                <div class="popup-icon">💡</div>
+                <h2 class="popup-title">Got a Brilliant Trading Strategy in Mind?</h2>
+                <p class="popup-subtitle">
+                    Whether it's the next game-changing algorithm or a unique market insight, 
+                    we'd love to hear about it. Let's turn your idea into reality together!
+                </p>
+            </div>
+            
+            <form class="popup-form" id="email-form">
+                <input 
+                    type="email" 
+                    class="popup-input" 
+                    id="popup-email"
+                    placeholder="Enter your email address" 
+                    required
+                >
+                
+                <div class="strategy-interests">
+                    <label class="strategy-label">What strategies interest you most?</label>
+                    <div class="strategy-options">
+                        <div class="strategy-option">
+                            <input type="checkbox" id="momentum" name="strategy" value="momentum">
+                            <label for="momentum">Momentum</label>
+                        </div>
+                        <div class="strategy-option">
+                            <input type="checkbox" id="mean-reversion" name="strategy" value="mean-reversion">
+                            <label for="mean-reversion">Mean Reversion</label>
+                        </div>
+                        <div class="strategy-option">
+                            <input type="checkbox" id="arbitrage" name="strategy" value="arbitrage">
+                            <label for="arbitrage">Arbitrage</label>
+                        </div>
+                        <div class="strategy-option">
+                            <input type="checkbox" id="custom" name="strategy" value="custom">
+                            <label for="custom">Custom Idea</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <button type="submit" class="popup-submit">
+                    Get Started - It's Quick & Easy!
+                </button>
+                
+                <div class="popup-trust">
+                    <div class="trust-badge">
+                        <div class="trust-icon">🔒</div>
+                        <div class="trust-text">100% Secure</div>
+                    </div>
+                    <div class="trust-badge">
+                        <div class="trust-icon">⚡</div>
+                        <div class="trust-text">Quick Response</div>
+                    </div>
+                    <div class="trust-badge">
+                        <div class="trust-icon">🎯</div>
+                        <div class="trust-text">No Spam</div>
+                    </div>
+                </div>
+                
+                <p class="popup-privacy">
+                    We respect your privacy. Your email will only be used to discuss your trading ideas.
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Floating Email Button -->
+    <div class="floating-email-btn" id="floating-email-btn" style="opacity: 0; transform: scale(0.8);">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 8L10.89 13.26C11.2187 13.4793 11.6049 13.5963 12 13.5963C12.3951 13.5963 12.7813 13.4793 13.11 13.26L21 8M5 19H19C19.5304 19 20.0391 18.7893 20.4142 18.4142C20.7893 18.0391 21 17.5304 21 17V7C21 6.46957 20.7893 5.96086 20.4142 5.58579C20.0391 5.21071 19.5304 5 19 5H5C4.46957 5 3.96086 5.21071 3.58579 5.58579C3.21071 5.96086 3 6.46957 3 7V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19Z" stroke="currentColor" stroke-width="2" fill="none"/>
+        </svg>
+    </div>
+
+    <!-- Success Message -->
+    <div class="success-message" id="success-message">
+        <h3>Awesome! We've Got Your Details 🎉</h3>
+        <p>We'll reach out within 24 hours to discuss your brilliant ideas!</p>
+    </div>
+
+    <!-- Notification Badge -->
+    <div class="notification-badge" id="notification-badge">
+        <span id="notification-text">Someone just shared their strategy idea!</span>
+    </div>
+
+    <!-- Activity Feed -->
+    <div class="activity-feed" id="activity-feed"></div>
+
+    <script src="navigation.js"></script>
+    <script src="email-popup.js"></script>
+    <script>
+        // Quick CTAs for popup
+        document.getElementById('fomo-cta').addEventListener('click', (e) => {
+            e.preventDefault();
+            window.QuantEdgePopup.show();
+        });
+        
+        document.getElementById('idea-cta').addEventListener('click', (e) => {
+            e.preventDefault();
+            window.QuantEdgePopup.show();
+        });
+        
+        document.getElementById('demo-cta').addEventListener('click', (e) => {
+            e.preventDefault();
+            window.QuantEdgePopup.show();
+        });
+
+        // Activity Feed
+        const activities = [
+            "New York trader started using Gap & Go Strategy",
+            "Singapore fund licensed Monthly Dip Strategy",
+            "London trader achieved 47% returns this month",
+            "Dubai client upgraded to Bespoke Development",
+            "Tokyo trader joined our exclusive community"
+        ];
+
+        function showActivity() {
+            const feed = document.getElementById('activity-feed');
+            const randomActivity = activities[Math.floor(Math.random() * activities.length)];
+            const timeAgo = Math.floor(Math.random() * 59) + 1;
+            
+            const item = document.createElement('div');
+            item.className = 'activity-item';
+            item.innerHTML = `
+                <p>${randomActivity}</p>
+                <div class="activity-time">${timeAgo} minutes ago</div>
+            `;
+            
+            feed.appendChild(item);
+            
+            setTimeout(() => {
+                item.remove();
+            }, 10000);
+        }
+
+        // Show activity every 8-15 seconds
+        setInterval(showActivity, Math.random() * 7000 + 8000);
+        setTimeout(showActivity, 3000);
+    </script>
+</body>
+</html>

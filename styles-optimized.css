@@ -1,0 +1,795 @@
+/* Enhanced Quant Website Styles - Optimized for Engagement & Lead Generation */
+
+/* Import base styles */
+@import url('styles.css');
+
+/* Enhanced Visual Hierarchy for Strategy Pages */
+.strategy-hero {
+    min-height: 80vh;
+    background: linear-gradient(135deg, rgba(10, 14, 26, 0.95) 0%, rgba(20, 25, 37, 0.95) 100%);
+    position: relative;
+    overflow: hidden;
+    padding: 120px 0 80px;
+}
+
+.strategy-hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(26, 115, 232, 0.1) 0%, transparent 40%);
+    animation: float 20s ease-in-out infinite;
+}
+
+.strategy-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.strategy-badge {
+    display: inline-block;
+    padding: 10px 24px;
+    background: rgba(52, 168, 83, 0.2);
+    border: 1px solid rgba(52, 168, 83, 0.4);
+    border-radius: 50px;
+    color: var(--accent-color);
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 2rem;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.strategy-title {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    background: linear-gradient(135deg, var(--text-primary) 0%, var(--secondary-color) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.strategy-subtitle {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
+}
+
+/* Performance Grid */
+.performance-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.performance-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.performance-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--primary-color);
+}
+
+.performance-value {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.performance-label {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Hero CTA */
+.hero-cta {
+    margin-top: 3rem;
+}
+
+.btn-large {
+    padding: 18px 40px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    box-shadow: 0 10px 30px rgba(26, 115, 232, 0.4);
+}
+
+.cta-subtext {
+    margin-top: 1rem;
+    color: var(--accent-color);
+    font-weight: 600;
+    animation: blink 2s ease-in-out infinite;
+}
+
+/* Enhanced Strategy Content Sections */
+.strategy-overview,
+.strategy-mechanics,
+.risk-management,
+.backtesting-results,
+.implementation-timeline,
+.testimonials-section {
+    padding: 80px 0;
+    position: relative;
+}
+
+.strategy-overview {
+    background: linear-gradient(180deg, var(--dark-bg) 0%, rgba(10, 14, 26, 0.98) 100%);
+}
+
+.lead {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 3rem;
+    max-width: 900px;
+}
+
+/* Strategy Features */
+.strategy-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.strategy-feature {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.strategy-feature:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-color);
+    box-shadow: 0 20px 40px rgba(26, 115, 232, 0.2);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Mechanics Grid */
+.mechanics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.mechanics-card {
+    background: linear-gradient(135deg, var(--card-bg) 0%, rgba(20, 25, 37, 0.8) 100%);
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.mechanics-step {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 50px;
+    height: 50px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: white;
+}
+
+/* Enhanced Testimonials */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.testimonial-card {
+    background: linear-gradient(135deg, rgba(26, 115, 232, 0.05) 0%, rgba(52, 168, 83, 0.05) 100%);
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 1px solid rgba(26, 115, 232, 0.2);
+    transition: all 0.3s ease;
+}
+
+.testimonial-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-stars {
+    color: #FFD700;
+    font-size: 1.2rem;
+}
+
+.testimonial-date {
+    color: var(--accent-color);
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+blockquote {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+/* Risk Management Cards */
+.risk-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.risk-card {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.risk-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* Backtesting Section */
+.backtest-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.backtest-card {
+    background: var(--card-bg);
+    padding: 3rem;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+}
+
+.metric-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.metric-label {
+    color: var(--text-muted);
+}
+
+.metric-value {
+    color: var(--text-primary);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+/* Regime Performance Bars */
+.regime-item {
+    margin-bottom: 1.5rem;
+}
+
+.regime-label {
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.regime-bar {
+    background: rgba(26, 115, 232, 0.2);
+    border-radius: 50px;
+    height: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.regime-bar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: inherit;
+    background: var(--gradient-primary);
+    border-radius: 50px;
+}
+
+.regime-value {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-weight: 700;
+}
+
+/* Live Trades Preview */
+.live-trades-preview {
+    background: rgba(52, 168, 83, 0.05);
+    border: 1px solid rgba(52, 168, 83, 0.2);
+    border-radius: 16px;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.trade-result {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.trade-time {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.trade-symbol {
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+.trade-profit {
+    color: var(--accent-color);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+/* Email Capture Pop-up Modal */
+.email-popup-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 10000;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+    animation: fadeIn 0.3s ease;
+}
+
+.email-popup-modal.active {
+    display: flex;
+}
+
+.email-popup-content {
+    background: linear-gradient(135deg, #1a1f2e 0%, #151922 100%);
+    border-radius: 24px;
+    padding: 3rem;
+    max-width: 550px;
+    width: 90%;
+    position: relative;
+    border: 1px solid rgba(26, 115, 232, 0.3);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), 0 0 60px rgba(26, 115, 232, 0.1);
+    animation: slideUp 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.popup-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.popup-close:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: rotate(90deg);
+}
+
+.popup-close::before,
+.popup-close::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background: var(--text-primary);
+}
+
+.popup-close::before {
+    transform: rotate(45deg);
+}
+
+.popup-close::after {
+    transform: rotate(-45deg);
+}
+
+.popup-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.popup-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 2.5rem;
+}
+
+.popup-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.popup-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.popup-form {
+    margin-top: 2rem;
+}
+
+.popup-input {
+    width: 100%;
+    padding: 1.2rem 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: var(--text-primary);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+.popup-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 20px rgba(26, 115, 232, 0.2);
+}
+
+.popup-input::placeholder {
+    color: var(--text-muted);
+}
+
+.popup-submit {
+    width: 100%;
+    padding: 1.2rem 2rem;
+    background: var(--gradient-primary);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(26, 115, 232, 0.3);
+}
+
+.popup-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 40px rgba(26, 115, 232, 0.4);
+}
+
+.popup-privacy {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+.popup-privacy a {
+    color: var(--primary-color);
+}
+
+/* Strategy Selection */
+.strategy-interests {
+    margin: 1.5rem 0;
+}
+
+.strategy-label {
+    display: block;
+    margin-bottom: 0.75rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.strategy-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.75rem;
+}
+
+.strategy-option {
+    position: relative;
+}
+
+.strategy-option input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+}
+
+.strategy-option label {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.strategy-option input[type="checkbox"]:checked + label {
+    background: rgba(26, 115, 232, 0.2);
+    border-color: var(--primary-color);
+    color: var(--text-primary);
+}
+
+.strategy-option label:hover {
+    border-color: var(--primary-color);
+}
+
+/* Trust Badges in Popup */
+.popup-trust {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.trust-badge {
+    text-align: center;
+}
+
+.trust-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.trust-text {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* Floating Action Button for Email Capture */
+.floating-email-btn {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    background: var(--gradient-primary);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(26, 115, 232, 0.4);
+    transition: all 0.3s ease;
+    z-index: 998;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.floating-email-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 40px rgba(26, 115, 232, 0.5);
+}
+
+.floating-email-btn svg {
+    width: 28px;
+    height: 28px;
+    fill: white;
+}
+
+/* Enhanced Strategy CTA Section */
+.strategy-cta {
+    background: linear-gradient(135deg, rgba(26, 115, 232, 0.1) 0%, rgba(52, 168, 83, 0.1) 100%);
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-urgency {
+    font-size: 1.2rem;
+    color: var(--accent-color);
+    margin-bottom: 3rem;
+}
+
+.cta-guarantee {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 20px;
+    padding: 3rem;
+    margin: 3rem 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.guarantee-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.guarantee-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.guarantee-number {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    color: white;
+}
+
+/* CTA Bonuses */
+.cta-bonuses {
+    background: rgba(52, 168, 83, 0.05);
+    border: 1px solid rgba(52, 168, 83, 0.2);
+    border-radius: 16px;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.cta-bonuses h4 {
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.cta-bonuses ul {
+    list-style: none;
+    padding: 0;
+}
+
+.cta-bonuses li {
+    padding: 0.5rem 0;
+    color: var(--text-secondary);
+}
+
+/* Success Message */
+.success-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    background: linear-gradient(135deg, #34a853 0%, #1a73e8 100%);
+    color: white;
+    padding: 2rem 3rem;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 10001;
+    text-align: center;
+}
+
+.success-message.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Notification Badge */
+.notification-badge {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(26, 115, 232, 0.95);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    box-shadow: 0 10px 30px rgba(26, 115, 232, 0.3);
+    z-index: 1000;
+    opacity: 0;
+    transform: translate(-50%, -20px);
+    transition: all 0.5s ease;
+}
+
+.notification-badge.show {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .email-popup-content {
+        padding: 2rem;
+    }
+    
+    .popup-title {
+        font-size: 1.5rem;
+    }
+    
+    .performance-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .strategy-features,
+    .mechanics-grid,
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .floating-email-btn {
+        width: 50px;
+        height: 50px;
+        bottom: 80px;
+    }
+}
